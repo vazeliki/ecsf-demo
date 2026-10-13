@@ -1,7 +1,7 @@
 # Extended ECSF — Cybersecurity Role Profiles
 
-A static website for the Extended ECSF: 12 role profiles and 22 skill areas,
-each skill area scored across four proficiency levels, with roles and skill
+A static website for the ECSF 2.0: 12 ECSF profiles and 22 skill areas,
+each skill area evolves across four proficiency levels, with roles and skill
 areas cross-linked in both directions.
 
 ## File structure
