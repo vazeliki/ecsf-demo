@@ -31,11 +31,7 @@ areas cross-linked in both directions.
 
 ## Credits
 
-The 12 role-profile icons and their colors are sourced directly from ENISA's
-official [ECSF Web Tool](https://github.com/enisaeu/ECSF) (EUPL licence),
-the same source as the framework data itself. The card layout on the Roles
-page (icon, colored title, summary, "[more]" link) is modeled on ENISA's own
-[ECSF Tool](https://enisaeu.github.io/ECSF/#/profiles) profile grid.
+
 
 ## Editing content later
 
