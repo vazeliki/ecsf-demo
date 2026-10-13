@@ -1,6 +1,20 @@
 const DATA = window.ECSF_DATA;
 const ROLES = DATA.roles;
 const SKILLS = DATA.skills;
+const TRANSVERSAL = DATA.transversal || [];
+const isTransversal = (id) => TRANSVERSAL.includes(id);
+function transTag() { return `<span class="trans-tag" title="Transversal skill area: profile levels are set directly, not derived from tasks">transversal</span>`; }
+function highlight(text, q) {
+  const safe = esc(text);
+  if (!q) return safe;
+  const re = new RegExp("(" + q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig");
+  return safe.replace(re, "<mark>$1</mark>");
+}
+
+function saChip(id) {
+  const s = SKILLS.find((x) => x.id === id);
+  return `<a class="sa-chip" href="#/skill/${id.toLowerCase()}" title="${esc(s ? s.name : id)}">${esc(id)}</a>`;
+}
 
 // ---------- helpers ----------
 function slugify(str) {
@@ -43,15 +57,24 @@ document.getElementById("footer-meta").textContent =
 function renderRoleGrid(filter) {
   const grid = document.getElementById("role-grid");
   const q = (filter || "").trim().toLowerCase();
-  const items = ROLES.filter((r) => !q || r.name.toLowerCase().includes(q));
+  const items = ROLES.map((r) => ({
+    r,
+    nameHit: !q || r.name.toLowerCase().includes(q),
+    tasks: q ? r.tasks.filter((t) => t.text.toLowerCase().includes(q)) : [],
+  })).filter((x) => x.nameHit || x.tasks.length);
+
+  const note = document.getElementById("role-search-note");
+  note.textContent = q
+    ? `${items.length} of ${ROLES.length} profiles match “${filter.trim()}” in their name or tasks.`
+    : "";
 
   if (items.length === 0) {
-    grid.innerHTML = `<div class="empty">No ECSF profiles match “${esc(filter)}”.</div>`;
+    grid.innerHTML = `<div class="empty">No ECSF profiles or tasks match “${esc(filter)}”.</div>`;
     return;
   }
 
   grid.innerHTML = items
-    .map((r) => `
+    .map(({ r, tasks }) => `
       <div class="role-card role-card-ecsf" data-slug="${roleSlug(r)}">
         <div class="role-card-icon">
           <img src="assets/icons/${r.icon}.svg" alt="" width="64" height="64" />
@@ -60,6 +83,9 @@ function renderRoleGrid(filter) {
         <p class="role-card-summary">
           ${esc(r.summary || "")}
         </p>
+        ${tasks.length ? `<div class="task-hits"><strong>${tasks.length} matching task${tasks.length > 1 ? "s" : ""}</strong>
+          ${tasks.slice(0, 2).map((t) => `<p>${highlight(t.text, q)}</p>`).join("")}
+          ${tasks.length > 2 ? `<p class="more">+${tasks.length - 2} more</p>` : ""}</div>` : ""}
       </div>`)
     .join("");
 
@@ -72,7 +98,9 @@ function renderRoleGrid(filter) {
 function renderSkillGrid(filter) {
   const grid = document.getElementById("skill-grid");
   const q = (filter || "").trim().toLowerCase();
-  const items = SKILLS.filter((s) => !q || s.name.toLowerCase().includes(q));
+  const items = SKILLS.filter((s) => !q || [s.name, s.description]
+    .concat(LEVEL_ORDER.map((l) => (s.levels[l] ? s.levels[l].description : "")))
+    .join(" ").toLowerCase().includes(q));
 
   if (items.length === 0) {
     grid.innerHTML = `<div class="empty">No skill areas match “${esc(filter)}”.</div>`;
@@ -82,7 +110,7 @@ function renderSkillGrid(filter) {
   grid.innerHTML = items
     .map((s) => `
       <div class="skill-card" data-id="${s.id.toLowerCase()}">
-        <div class="skill-id">${s.id}</div>
+        <div class="skill-id">${s.id}${isTransversal(s.id) ? " " + transTag() : ""}</div>
         <h3>${esc(s.name)}</h3>
         <p class="muted" style="font-size:15.5px;line-height:1.6;margin:0 0 12px;">${esc(s.description || "")}</p>
         <div class="mini-levels">
@@ -119,7 +147,7 @@ function renderRoleDetail(slug) {
     .map((t) => `
       <li class="task">
         <span class="task-num">${esc(t.id)}</span>
-        <span>${esc(t.text)}</span>
+        <span>${esc(t.text)}${t.skill ? saChip(t.skill) : ""}</span>
       </li>`)
     .join("");
 
@@ -148,7 +176,10 @@ function renderSkillDetail(id) {
 
   document.getElementById("skill-detail-title").textContent = skill.name;
   document.getElementById("skill-detail-desc").textContent = skill.description || "";
-  document.getElementById("skill-detail-eyebrow").textContent = skill.id + " · Skill area";
+  document.getElementById("skill-detail-eyebrow").innerHTML = esc(skill.id + " · Skill area") + (isTransversal(skill.id) ? " " + transTag() : "");
+  const transNote = document.getElementById("skill-detail-trans");
+  transNote.style.display = isTransversal(skill.id) ? "" : "none";
+  transNote.innerHTML = `<strong>Transversal skill area.</strong> Profile levels are set directly, based on how each profile uses AI in its work. They are not derived from tasks.`;
 
   document.getElementById("skill-detail-levels").innerHTML = LEVEL_ORDER
     .map((lvl) => {
@@ -199,7 +230,8 @@ function renderMatrix() {
   html += "</tr></thead><tbody>";
 
   SKILLS.forEach((s) => {
-    html += `<tr><td class="matrix-rowlabel"><a href="#/skill/${s.id.toLowerCase()}" title="${esc(s.name)}"><span class="matrix-sid">${s.id}</span>${esc(s.name)}</a></td>`;
+    const tr = isTransversal(s.id);
+    html += `<tr class="${tr ? "row-trans" : ""}"><td class="matrix-rowlabel"><a href="#/skill/${s.id.toLowerCase()}" title="${esc(s.name)}"><span class="matrix-sid">${s.id}</span>${esc(s.name)}</a>${tr ? " " + transTag() : ""}</td>`;
     ROLES.forEach((r) => {
       const ref = r.skills.find((x) => x.id === s.id);
       if (ref) {
@@ -229,6 +261,7 @@ const VIEW_IDS = {
   skills: "view-skills",
   "skill-detail": "view-skill-detail",
   matrix: "view-matrix",
+  features: "view-features",
 };
 
 function showView(key) {
@@ -276,6 +309,10 @@ function router() {
   if (parts[0] === "matrix") {
     renderMatrix();
     showView("matrix");
+    return;
+  }
+  if (parts[0] === "features") {
+    showView("features");
     return;
   }
   showView("home");

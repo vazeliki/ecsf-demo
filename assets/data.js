@@ -1,10 +1,10 @@
 window.ECSF_DATA = {
   "meta": {
     "title": "ECSF updated",
-    "date": "10/08/2026",
-    "source": "ECSF_AUG2026.pptx",
+    "date": "07/10/2026",
+    "source": "ECSF_RevisedTasks_Oct2026.xlsx, ECSF_SkillAreas_Oct2026.xlsx",
     "roleCount": 12,
-    "skillAreaCount": 20
+    "skillAreaCount": 22
   },
   "roles": [
     {
@@ -12,55 +12,78 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Define, secure senior-management approval for, and oversee execution of the cybersecurity strategy, goals, policies and plans, aligned with business objectives."
+          "text": "Define the cybersecurity strategy and goals, policies and plans, aligned with business objectives, secure senior-management approval and oversee execution.",
+          "skill": "S01"
         },
         {
           "id": "02",
-          "text": "Supervise the application and continual improvement of cybersecurity management systems."
+          "text": "Supervise the implementation, maintenance and continual improvement of the cybersecurity management system.",
+          "skill": "S01"
         },
         {
           "id": "03",
-          "text": "Present cybersecurity risk exposure to senior management and secure formal approval of the organisation's risk appetite and tolerance."
+          "text": "Present cybersecurity risk exposure to senior management and secure formal approval of the risk appetite and tolerance.",
+          "skill": "S02"
         },
         {
           "id": "04",
-          "text": "Lead the organisation's Cyber Incident Response Team (CIRT) as executive decision authority during major cybersecurity crises, directing critical cybersecurity decisions."
+          "text": "Provide executive cybersecurity leadership during major cybersecurity incidents, directing strategic response decisions and advising senior management on risk, business impact and required actions.",
+          "skill": "S08"
         },
         {
           "id": "05",
-          "text": "Oversee the development and maintenance of the procedures, plans and standards that underpin the organisation's cyber resiliency."
+          "text": "Oversee the establishment, implementation, maintenance and continual improvement of the procedures, plans and standards that underpin cyber resilience.",
+          "skill": "S06"
         },
         {
           "id": "06",
-          "text": "Develop relationships with cybersecurity-related authorities and communities."
+          "text": "Develop, manage and maintain relationships with cybersecurity-related authorities, communities and other external stakeholders.",
+          "skill": "S16"
         },
         {
           "id": "07",
-          "text": "Report and manage disclosure of cybersecurity incidents, risks and findings to senior management, regulators and relevant authorities."
+          "text": "Notify, report and communicate cybersecurity incidents, risks and findings to relevant stakeholders (internal and external) as appropriate.",
+          "skill": "S15"
         },
         {
           "id": "08",
-          "text": "Monitor and evaluate the effectiveness of the cybersecurity programme over time, driving continuous improvement of the organisation's security posture and maturity."
+          "text": "Define the framework for measuring cybersecurity performance and effectiveness, monitor results over time and set improvement priorities.",
+          "skill": "S14"
         },
         {
           "id": "09",
-          "text": "Monitor advancements and emerging trends in the cybersecurity landscape."
+          "text": "Monitor advancements and emerging trends in the cybersecurity threat landscape",
+          "skill": "S07"
         },
         {
           "id": "10",
-          "text": "Plan, secure and negotiate the cybersecurity budget, and allocate financial, human and technical resources."
+          "text": "Collaborate with internal and external stakeholders to support the implementation of cybersecurity objectives.",
+          "skill": "S17"
         },
         {
           "id": "11",
-          "text": "Sponsor and oversee the continuous development of cybersecurity capacity and capability across the organisation."
+          "text": "Plan, secure and negotiate the cybersecurity budget, and allocate financial, human and technical resources",
+          "skill": "S20"
         },
         {
           "id": "12",
-          "text": "Define and oversee supply chain security strategy."
+          "text": "Sponsor and oversee the continuous development of cybersecurity capacity at all levels.",
+          "skill": "S18"
         },
         {
           "id": "13",
-          "text": "Ensure the cybersecurity programme aligns with applicable legal, regulatory and contractual obligations, identifying and resolving compliance gaps."
+          "text": "Define and oversee supply chain security strategy",
+          "skill": "S04"
+        },
+        {
+          "id": "14",
+          "text": "Ensure the cybersecurity programme aligns with applicable legal, regulatory and contractual obligations, identifying and resolving compliance gaps",
+          "skill": "S03"
+        },
+        {
+          "id": "15",
+          "text": "Ensure cybersecurity is integrated into business continuity, disaster recovery and crisis management arrangements, and oversee their regular testing to maintain cyber resilience.",
+          "skill": "S21"
         }
       ],
       "skills": [
@@ -82,7 +105,7 @@ window.ECSF_DATA = {
         {
           "id": "S04",
           "name": "Supply Chain & Third-Party Security",
-          "level": "L3"
+          "level": "L4"
         },
         {
           "id": "S06",
@@ -97,12 +120,12 @@ window.ECSF_DATA = {
         {
           "id": "S08",
           "name": "Incident Response",
-          "level": "L3"
+          "level": "L4"
         },
         {
           "id": "S14",
           "name": "Monitoring & Continuous Improvement",
-          "level": "L3"
+          "level": "L4"
         },
         {
           "id": "S15",
@@ -115,14 +138,29 @@ window.ECSF_DATA = {
           "level": "L4"
         },
         {
+          "id": "S17",
+          "name": "Collaboration & Teamwork",
+          "level": "L4"
+        },
+        {
           "id": "S18",
           "name": "Capacity Building",
-          "level": "L3"
+          "level": "L4"
         },
         {
           "id": "S20",
           "name": "Project & Resource Management",
-          "level": "L3"
+          "level": "L4"
+        },
+        {
+          "id": "S21",
+          "name": "Cyber Resilience",
+          "level": "L4"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
+          "level": "L4"
         }
       ],
       "icon": "ciso",
@@ -135,51 +173,63 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Define and maintain the organisation's auditing policy, procedures, standards, guidelines and necessary supporting documentation (e.g., generic checklists, reporting templates) as needed."
+          "text": "Develop, implement, maintain and continually improve the audit programme, policy, procedures, methodologies, standards, guidelines and necessary supporting documentation.",
+          "skill": "S06"
         },
         {
           "id": "02",
-          "text": "Develop the audit plan — methodology, sampling approach and audit tests, and prepare working documents (checklists, guidelines)."
+          "text": "Define the scope, objectives and criteria for each audit, informed by the risk profile of the target environment, and develop the audit plan, methodology, sampling approach, audit tests and working documents.",
+          "skill": "S05"
         },
         {
           "id": "03",
-          "text": "Conduct audit activities, including opening meetings, interviews, observation and review of documented information."
+          "text": "Conduct audit activities using suitable auditing methods, depending on the defined audit objectives, scope, criteria, duration and location.",
+          "skill": "S05"
         },
         {
           "id": "04",
-          "text": "Define the scope, objectives and criteria for each audit, informed by the risk profile of the target environment."
+          "text": "Evaluate cyber resilience arrangements, including backup, recovery and continuity measures and their testing, against defined requirements and recovery objectives.",
+          "skill": "S21"
         },
         {
           "id": "05",
-          "text": "Collect and evaluate evidence through appropriate sampling techniques to determine audit findings against defined criteria."
+          "text": "Interpret applicable legal, regulatory and contractual requirements to establish audit criteria, and identify and document compliance gaps against them.",
+          "skill": "S03"
         },
         {
           "id": "06",
-          "text": "Maintain and protect the integrity and confidentiality of audit records."
+          "text": "Collaborate with internal and external stakeholders to support the correct and effective implementation of the audit programme.",
+          "skill": "S17"
         },
         {
           "id": "07",
-          "text": "Determine audit conclusions and develop and communicate audit reports (e.g. conformity, certification, assurance reports) to relevant stakeholders."
+          "text": "Determine audit conclusions and develop and communicate audit reports to relevant stakeholders",
+          "skill": "S15"
         },
         {
           "id": "08",
-          "text": "Conduct audit follow-up activities to verify the implementation and effectiveness of corrective actions."
+          "text": "Conduct audit follow-up activities to verify the implementation and effectiveness of corrective actions",
+          "skill": "S05"
         },
         {
           "id": "09",
-          "text": "Communicate audit progress, findings and risk severity clearly to relevant stakeholders throughout the audit, tailoring communication to technical and non-technical audiences."
+          "text": "Communicate audit progress, findings and risk exposure to relevant stakeholders throughout the audit, tailoring communication to technical and non-technical audiences",
+          "skill": "S16"
         },
         {
           "id": "10",
-          "text": "Identify the competencies, resources and time needed for the effective performance of each audit, monitoring costs where applicable."
+          "text": "Identify the competencies, resources and time needed for the effective performance of each audit.",
+          "skill": "S20"
         },
         {
           "id": "11",
-          "text": "Monitor the effectiveness of audit activities and methods used, and propose improvements to auditing practices."
+          "text": "Monitor and review the effectiveness of the audit programme, procedures and implementation and identify risks, opportunities for improvement or good practices.",
+          "skill": "S14"
         },
         {
           "id": "12",
-          "text": "Assess and classify audit findings by risk severity to inform prioritisation of remediation actions."
+          "text": "Assess and classify audit findings by risk severity to inform prioritisation of remediation actions",
+          "skill": "S02"
         }
       ],
       "skills": [
@@ -187,6 +237,11 @@ window.ECSF_DATA = {
           "id": "S02",
           "name": "Risk Management",
           "level": "L1"
+        },
+        {
+          "id": "S03",
+          "name": "Legal, Regulatory & Compliance",
+          "level": "L2"
         },
         {
           "id": "S05",
@@ -214,9 +269,24 @@ window.ECSF_DATA = {
           "level": "L3"
         },
         {
+          "id": "S17",
+          "name": "Collaboration & Teamwork",
+          "level": "L3"
+        },
+        {
           "id": "S20",
           "name": "Project & Resource Management",
           "level": "L2"
+        },
+        {
+          "id": "S21",
+          "name": "Cyber Resilience",
+          "level": "L2"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
+          "level": "L3"
         }
       ],
       "icon": "auditor",
@@ -229,39 +299,60 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Identify attack vectors, and uncover and demonstrate exploitation of technical cybersecurity vulnerabilities using appropriate penetration testing tools and test programs."
+          "text": "Select and develop penetration testing techniques, methodologies and procedures.",
+          "skill": "S06"
         },
         {
           "id": "02",
-          "text": "Test systems, products, services, and operations to ensure compliance with relevant regulatory and security standards."
+          "text": "Plan penetration testing engagements, defining scope, objectives, methodology and rules of engagement.",
+          "skill": "S11"
         },
         {
           "id": "03",
-          "text": "Select and develop appropriate penetration testing techniques, and organise test plans and procedures, including scope, rules of engagement and legal authorisation."
+          "text": "Conduct reconnaissance and information gathering to identify potential attack surfaces and vectors.",
+          "skill": "S11"
         },
         {
           "id": "04",
-          "text": "Analyse penetration testing results and document and report findings to stakeholders."
+          "text": "Identify attack vectors and vulnerabilities, demonstrate their exploitability, and assess their potential impact using appropriate penetration testing techniques and tools.",
+          "skill": "S11"
         },
         {
           "id": "05",
-          "text": "Conduct reconnaissance and information gathering on target systems, networks and applications to inform vulnerability analysis and attack planning."
+          "text": "Assess the effectiveness of implemented cybersecurity controls by attempting to bypass or circumvent them.",
+          "skill": "S11"
         },
         {
           "id": "06",
-          "text": "Assess the effectiveness of implemented cybersecurity controls by attempting to bypass or circumvent them, and validate remediation of identified vulnerabilities through retesting."
+          "text": "Validate the remediation of identified vulnerabilities through retesting.",
+          "skill": "S11"
+        },
+        {
+          "id": "07",
+          "text": "Analyse penetration testing results, document identified vulnerabilities and formulate evidence-based findings and remediation recommendations.",
+          "skill": "S15"
+        },
+        {
+          "id": "08",
+          "text": "Communicate penetration testing findings, risks and remediation recommendations to relevant technical and non-technical stakeholders.",
+          "skill": "S16"
+        },
+        {
+          "id": "09",
+          "text": "Ensure penetration testing is conducted within the bounds of legal authorisation, the agreed rules of engagement and applicable legal and regulatory requirements",
+          "skill": "S03"
         }
       ],
       "skills": [
         {
+          "id": "S03",
+          "name": "Legal, Regulatory & Compliance",
+          "level": "L1"
+        },
+        {
           "id": "S06",
           "name": "Procedures & Standards Development",
           "level": "L3"
-        },
-        {
-          "id": "S09",
-          "name": "Cybersecurity Controls & Operations",
-          "level": "L2"
         },
         {
           "id": "S11",
@@ -272,6 +363,16 @@ window.ECSF_DATA = {
           "id": "S15",
           "name": "Findings & Reporting",
           "level": "L2"
+        },
+        {
+          "id": "S16",
+          "name": "Stakeholder Communications",
+          "level": "L3"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
+          "level": "L3"
         }
       ],
       "icon": "pentester",
@@ -284,35 +385,53 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Develop, implement, maintain, assess and continuously improve the Incident Response Plan, procedures and handling techniques."
+          "text": "Develop, implement, maintain, assess and continuously improve the Incident Response Plan, incident-handling procedures and playbooks",
+          "skill": "S06"
         },
         {
           "id": "02",
-          "text": "Identify and analyse cybersecurity incidents, determining scope, severity and business impact."
+          "text": "Identify, triage and analyse cybersecurity incidents, determining scope, severity and business impact, using threat intelligence to identify indicators of compromise and attacker TTPs.",
+          "skill": "S08"
         },
         {
           "id": "03",
-          "text": "Assess and manage cybersecurity vulnerabilities identified during incident detection and response activities."
+          "text": "Receive, assess and coordinate the handling of reported cybersecurity vulnerabilities, including those identified during incident response.",
+          "skill": "S09"
         },
         {
           "id": "04",
-          "text": "Measure and evaluate the effectiveness and resilience of cybersecurity controls and incident response actions, feeding lessons learned back into incident response procedures."
+          "text": "Contain and mitigate cybersecurity incidents, and coordinate eradication and recovery activities.",
+          "skill": "S08"
         },
         {
           "id": "05",
-          "text": "Document the factual record of each incident — timeline, actions taken and outcomes — to support reporting, audit and future analysis."
+          "text": "Collect and analyse digital evidence to support incident investigation and response",
+          "skill": "S12"
         },
         {
           "id": "06",
-          "text": "Collaborate with incident response teams and security operations centers (e.g. CSIRTs, PSIRTs, SOCs)."
+          "text": "Evaluate the effectiveness of the response actions and the cybersecurity controls involved in each incident, feeding lessons learned back into incident response procedures",
+          "skill": "S14"
         },
         {
           "id": "07",
-          "text": "Cooperate with key personnel to ensure incident reporting meets applicable legal and regulatory requirements."
+          "text": "Document the factual record of each incident and, in cooperation with key personnel, ensure incident reporting meets applicable legal and regulatory requirements.",
+          "skill": "S15"
         },
         {
           "id": "08",
-          "text": "Communicate incident status, impact and remediation progress to affected stakeholders and business units throughout the response process."
+          "text": "Coordinate with incident response teams, security operations centres and other affected functions to align containment, remediation and recovery actions",
+          "skill": "S17"
+        },
+        {
+          "id": "09",
+          "text": "Support crisis management and disaster recovery during major cybersecurity incidents, providing the technical situational overview needed for recovery decisions.",
+          "skill": "S21"
+        },
+        {
+          "id": "10",
+          "text": "Communicate incident status, impact and remediation progress to affected stakeholders throughout the response process, translating technical detail into business impact",
+          "skill": "S16"
         }
       ],
       "skills": [
@@ -332,6 +451,11 @@ window.ECSF_DATA = {
           "level": "L2"
         },
         {
+          "id": "S12",
+          "name": "Digital Forensics & Investigation",
+          "level": "L2"
+        },
+        {
           "id": "S14",
           "name": "Monitoring & Continuous Improvement",
           "level": "L2"
@@ -344,11 +468,21 @@ window.ECSF_DATA = {
         {
           "id": "S16",
           "name": "Stakeholder Communications",
-          "level": "L2"
+          "level": "L3"
         },
         {
           "id": "S17",
           "name": "Collaboration & Teamwork",
+          "level": "L3"
+        },
+        {
+          "id": "S21",
+          "name": "Cyber Resilience",
+          "level": "L2"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
           "level": "L2"
         }
       ],
@@ -362,55 +496,70 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Design and propose security architectures in alignment with the organisation's strategy and security requirements."
+          "text": "Analyse business context, stakeholder needs, risk drivers and cybersecurity requirements to design and propose security architectures aligned with business strategy and goals.",
+          "skill": "S10"
         },
         {
           "id": "02",
-          "text": "Produce architectural documentation and specifications."
+          "text": "Develop and maintain cybersecurity architecture documentation and technical specifications.",
+          "skill": "S10"
         },
         {
           "id": "03",
-          "text": "Present and communicate security architecture designs and requirements to relevant stakeholders, collaborating to ensure their effective implementation."
+          "text": "Define the transition path from the current to the target security architecture, prioritising the work required to close identified gaps.",
+          "skill": "S10"
         },
         {
           "id": "04",
-          "text": "Establish a secure environment throughout the development lifecycle of systems, services and products, coordinating the development, integration and maintenance of cybersecurity components against specifications."
+          "text": "Present and communicate security architecture designs and requirements to relevant stakeholders to ensure their effective implementation",
+          "skill": "S16"
         },
         {
           "id": "05",
-          "text": "Evaluate security architectures to meet cybersecurity requirements."
+          "text": "Define and guide the implementation of secure architecture requirements throughout the development lifecycle of systems, services and products.",
+          "skill": "S10"
         },
         {
           "id": "06",
-          "text": "Adapt the security architecture in response to emerging threat landascape."
+          "text": "Assess cybersecurity architectures and implemented solutions to verify alignment with cybersecurity requirements.",
+          "skill": "S10"
         },
         {
           "id": "07",
-          "text": "Assess the implemented architecture to maintain an appropriate level of security."
+          "text": "Review implemented cybersecurity architectures over time and drive their improvement in response to changes in the threat landscape, business needs, technology and cybersecurity requirements.",
+          "skill": "S14"
         },
         {
           "id": "08",
-          "text": "Perform threat modelling to identify and assess potential security threats, supporting the design of secure systems, products, or services."
+          "text": "Perform threat modelling to identify and assess security threats and inform secure architecture and design decisions.",
+          "skill": "S02"
         },
         {
           "id": "09",
-          "text": "Gather and analyse business context, stakeholder needs and risk drivers to inform security architecture design."
+          "text": "Define and maintain security architecture principles, patterns and standards to guide consistent and secure architectural decisions.",
+          "skill": "S06"
         },
         {
           "id": "10",
-          "text": "Plan and sequence the evolution of the security architecture over time, prioritising the work required to close identified gaps."
+          "text": "Work with internal and external stakeholders to align cybersecurity architecture decisions with business needs and resolve design and implementation issues.",
+          "skill": "S17"
+        },
+        {
+          "id": "11",
+          "text": "Design security architectures for resilience, incorporating redundancy, segmentation and recoverability so that critical services can withstand and recover from cybersecurity incidents.",
+          "skill": "S21"
         }
       ],
       "skills": [
         {
+          "id": "S02",
+          "name": "Risk Management",
+          "level": "L2"
+        },
+        {
           "id": "S06",
           "name": "Procedures & Standards Development",
           "level": "L3"
-        },
-        {
-          "id": "S07",
-          "name": "Threat Intelligence & Analysis",
-          "level": "L2"
         },
         {
           "id": "S10",
@@ -425,11 +574,21 @@ window.ECSF_DATA = {
         {
           "id": "S16",
           "name": "Stakeholder Communications",
-          "level": "L2"
+          "level": "L3"
         },
         {
           "id": "S17",
           "name": "Collaboration & Teamwork",
+          "level": "L3"
+        },
+        {
+          "id": "S21",
+          "name": "Cyber Resilience",
+          "level": "L3"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
           "level": "L3"
         }
       ],
@@ -443,55 +602,68 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Ensure compliance with and provide legal advice and guidance on cybersecurity-related standards, laws and regulations, including legal and regulatory input into the development of the organisation's cybersecurity strategy, policies and procedures."
+          "text": "Provide legal advice and guidance on cybersecurity-related laws, regulations and standards, including legal and regulatory input into cybersecurity strategy, policies and procedures.",
+          "skill": "S03"
         },
         {
           "id": "02",
-          "text": "Identify and document compliance gaps."
+          "text": "Monitor applicable and emerging legal, regulatory and contractual obligations, assess their impact, and identify, document and advise on the alignment required, including through privacy impact assessments.",
+          "skill": "S03"
         },
         {
           "id": "03",
-          "text": "Conduct privacy impact assessments and develop, maintain and communicate the organisation's privacy policies and procedures."
+          "text": "Develop, maintain and communicate privacy policies and procedures.",
+          "skill": "S06"
         },
         {
           "id": "04",
-          "text": "Enforce and advocate the organisation's data privacy and protection programme."
+          "text": "Enforce and advocate the data privacy and protection programme.",
+          "skill": "S03"
         },
         {
           "id": "05",
-          "text": "Manage data subject rights requests (e.g. access, rectification, erasure, portability) and ensure relevant parties are informed of their data protection rights and obligations."
+          "text": "Manage data subject rights requests, ensure relevant parties are informed of their data protection rights and obligations, and maintain records of data processing activities, as required by applicable data protection legislation.",
+          "skill": "S03"
         },
         {
           "id": "06",
-          "text": "Act as a key contact point to handle cybersecurity-related legal queries and complaints."
+          "text": "Act as a key contact point to handle cybersecurity-related legal queries and complaints",
+          "skill": "S03"
         },
         {
           "id": "07",
-          "text": "Monitor cybersecurity and privacy compliance testing and audit activities, tracking their execution, outcomes and alignment with legal and regulatory requirements."
+          "text": "Monitor cybersecurity and privacy compliance testing and audit activities, tracking their execution, outcomes and alignment with legal and regulatory requirements",
+          "skill": "S03"
         },
         {
           "id": "08",
-          "text": "Cooperate and share information with regulators, authorities and professional groups."
+          "text": "Act as liaison with internal and external stakeholders, including regulators and authorities, sharing information as appropriate.",
+          "skill": "S16"
         },
         {
           "id": "09",
-          "text": "Develop, propose and communicate staff awareness training to achieve compliance and foster a culture of data protection within the organisation."
+          "text": "Develop, propose and communicate staff awareness training to achieve compliance and foster a culture of data protection.",
+          "skill": "S18"
         },
         {
           "id": "10",
-          "text": "Manage the legal aspects of cybersecurity responsibilities and third-party relations, and ensure supplier compliance with relevant cybersecurity standards and regulations through audits and contractual controls."
+          "text": "Manage the legal aspects of cybersecurity responsibilities and third-party relations, and ensure supplier compliance with relevant cybersecurity standards and regulations through audits and contractual controls",
+          "skill": "S04"
         },
         {
           "id": "11",
-          "text": "Report and manage regulatory breach-notification and mandatory disclosure obligations to relevant authorities, and prepare compliance and data protection status reports for senior management and relevant governance bodies."
+          "text": "Report and manage regulatory breach-notification and mandatory disclosure obligations to relevant authorities, and prepare compliance and data protection status reports for senior management and relevant governance bodies.",
+          "skill": "S15"
         },
         {
           "id": "12",
-          "text": "Maintain the organisation's records of data processing activities, as required by applicable data protection legislation."
+          "text": "Assess and prioritise identified legal and compliance gaps by risk exposure and severity to inform remediation and reporting",
+          "skill": "S02"
         },
         {
           "id": "13",
-          "text": "Assess and prioritise identified legal and compliance gaps by risk exposure and severity to inform remediation and reporting."
+          "text": "Work with internal and external stakeholders to implement legal and compliance obligations in practice.",
+          "skill": "S17"
         }
       ],
       "skills": [
@@ -508,7 +680,7 @@ window.ECSF_DATA = {
         {
           "id": "S04",
           "name": "Supply Chain & Third-Party Security",
-          "level": "L4"
+          "level": "L3"
         },
         {
           "id": "S06",
@@ -526,8 +698,18 @@ window.ECSF_DATA = {
           "level": "L4"
         },
         {
+          "id": "S17",
+          "name": "Collaboration & Teamwork",
+          "level": "L3"
+        },
+        {
           "id": "S18",
           "name": "Capacity Building",
+          "level": "L3"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
           "level": "L3"
         }
       ],
@@ -541,56 +723,70 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Develop digital forensics investigation policy, plans and procedures."
+          "text": "Identify, recover, extract, document and analyse digital evidence.",
+          "skill": "S12"
         },
         {
           "id": "02",
-          "text": "Identify, recover, extract, document and analyse digital evidence."
+          "text": "Preserve and protect digital evidence, maintain a documented chain of custody, and securely provide evidence to authorised stakeholders in accordance with applicable procedures.",
+          "skill": "S12"
         },
         {
           "id": "03",
-          "text": "Preserve and protect digital evidence, documents chain of custody and make it available to authorised stakeholders."
+          "text": "Inspect digital environments for evidence of unauthorised activity, security incidents and other events relevant to the investigation.",
+          "skill": "S12"
         },
         {
           "id": "04",
-          "text": "Inspect environments for evidence of unauthorised and unlawful actions."
+          "text": "Correlate and analyse digital evidence to reconstruct events, establish timelines and determine the facts relevant to the investigation.",
+          "skill": "S12"
         },
         {
           "id": "05",
-          "text": "Report, prepare court testimony and present digital forensic analysis findings and results."
+          "text": "Document and report digital forensic findings and analysis results to authorised stakeholders.",
+          "skill": "S15"
         },
         {
           "id": "06",
-          "text": "Identify, analyse and assess technical and organisational vulnerabilities uncovered during forensic investigations."
+          "text": "Present and explain digital forensic findings to non-technical audiences, and provide expert testimony when required.",
+          "skill": "S16"
         },
         {
           "id": "07",
-          "text": "Validate and maintain forensic tools, techniques and methodologies to ensure the reliability, repeatability and reproducibility of investigation results."
+          "text": "Identify technical and organisational weaknesses that contributed to or were uncovered during forensic investigations, and provide findings to support remediation.",
+          "skill": "S12"
         },
         {
           "id": "08",
-          "text": "Collaborate with law enforcement, legal counsel and incident response teams throughout digital forensics investigations."
+          "text": "Validate and maintain digital forensic tools to ensure the reliability, integrity, repeatability and reproducibility of investigation results.",
+          "skill": "S12"
         },
         {
           "id": "09",
-          "text": "Ensure digital forensics investigations are conducted in accordance with applicable legal, regulatory and jurisdictional requirements, including authorisation, privacy and data protection obligations."
+          "text": "Develop and maintain digital forensics investigation plans, procedures, techniques and methodologies, and support their implementation and continuous improvement.",
+          "skill": "S06"
+        },
+        {
+          "id": "10",
+          "text": "Collaborate with law enforcement, legal counsel, incident response teams and other relevant stakeholders throughout digital forensics investigations.",
+          "skill": "S17"
+        },
+        {
+          "id": "11",
+          "text": "Ensure digital forensics investigations are conducted in accordance with applicable legal, regulatory and jurisdictional requirements, including authorisation, privacy and data protection obligations",
+          "skill": "S03"
         }
       ],
       "skills": [
         {
           "id": "S03",
           "name": "Legal, Regulatory & Compliance",
-          "level": "L1"
+          "level": "L2"
         },
         {
           "id": "S06",
           "name": "Procedures & Standards Development",
           "level": "L3"
-        },
-        {
-          "id": "S09",
-          "name": "Cybersecurity Controls & Operations",
-          "level": "L1"
         },
         {
           "id": "S12",
@@ -603,9 +799,19 @@ window.ECSF_DATA = {
           "level": "L2"
         },
         {
+          "id": "S16",
+          "name": "Stakeholder Communications",
+          "level": "L3"
+        },
+        {
           "id": "S17",
           "name": "Collaboration & Teamwork",
           "level": "L2"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
+          "level": "L3"
         }
       ],
       "icon": "forensics-analyst",
@@ -618,43 +824,43 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Develop, implement and manage the organisation's cyber threat intelligence strategy."
+          "text": "Develop and implement cyber threat intelligence plans and procedures, ensuring threat intelligence is effectively integrated into relevant processes and functions.",
+          "skill": "S06"
         },
         {
           "id": "02",
-          "text": "Develop and maintain threat intelligence plans and procedures that integrate insights across the organization."
+          "text": "Translate business requirements into threat intelligence requirements, and refine them based on stakeholder feedback",
+          "skill": "S07"
         },
         {
           "id": "03",
-          "text": "Translate business requirements into Intelligence Requirements, and refine them based on stakeholder feedback."
+          "text": "Collect and process threat data from diverse sources to support intelligence analysis and production",
+          "skill": "S07"
         },
         {
           "id": "04",
-          "text": "Collect and process threat data from diverse sources (open-source, proprietary and technical feeds) to support intelligence analysis and production."
+          "text": "Identify and assess relevant cyber threat actors.",
+          "skill": "S07"
         },
         {
           "id": "05",
-          "text": "Identify and assess cyber threat actors targeting the organisation."
+          "text": "Identify, monitor and assess the Tactics, Techniques and Procedures (TTPs) used by cyber threat actors",
+          "skill": "S07"
         },
         {
           "id": "06",
-          "text": "Identify, monitor and assess the Tactics, Techniques and Procedures (TTPs) used by cyber threat actors by analysing open-source and proprietary data, information and intelligence."
+          "text": "Produce actionable reports based on threat intelligence information",
+          "skill": "S15"
         },
         {
           "id": "07",
-          "text": "Produce actionable reports based on threat intelligence data."
+          "text": "Work with security operations, incident response, risk management and other relevant teams to develop mitigation plans at tactical, operational and strategic level, using threat intelligence to support threat modelling, risk mitigation and threat hunting.",
+          "skill": "S17"
         },
         {
           "id": "08",
-          "text": "Elaborate and advise on mitigation plans at the tactical, operational and strategic level, leveraging intelligence to support threat modelling, risk mitigation recommendations and cyber threat hunting."
-        },
-        {
-          "id": "09",
-          "text": "Coordinate with stakeholders to share and consume intelligence on relevant cyber threats."
-        },
-        {
-          "id": "10",
-          "text": "Articulate and communicate threat intelligence effectively to technical and non-technical stakeholders, conveying risk exposure and its business consequences."
+          "text": "Articulate and communicate threat intelligence effectively to technical and non-technical stakeholders, conveying risk exposure and its business consequences",
+          "skill": "S16"
         }
       ],
       "skills": [
@@ -682,6 +888,11 @@ window.ECSF_DATA = {
           "id": "S17",
           "name": "Collaboration & Teamwork",
           "level": "L2"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
+          "level": "L2"
         }
       ],
       "icon": "cti-specialist",
@@ -694,39 +905,48 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Analyse and assess cybersecurity technologies, solutions, developments and processes."
+          "text": "Analyse and assess cybersecurity technologies, developments and processes to identify emerging capabilities, limitations and research opportunities.",
+          "skill": "S13"
         },
         {
           "id": "02",
-          "text": "Conduct research on cybersecurity-related topics to advance the current state-of-the-art."
+          "text": "Conduct research on cybersecurity-related topics to advance the state of the art.",
+          "skill": "S13"
         },
         {
           "id": "03",
-          "text": "Develop and test innovative cybersecurity solutions, selecting and applying appropriate frameworks, methods, standards, tools and protocols, including conducting experiments and building proofs of concept, pilots and prototypes."
+          "text": "Develop and test innovative cybersecurity solutions by selecting and applying appropriate frameworks, methods, standards, tools and protocols, including conducting experiments and developing proofs of concept, pilots and prototypes.",
+          "skill": "S13"
         },
         {
           "id": "04",
-          "text": "Contributes towards cutting-edge cybersecurity business ideas, services and solutions."
+          "text": "Identify emerging cybersecurity challenges and research opportunities, and contribute to the development of innovative cybersecurity concepts, services and solutions.",
+          "skill": "S13"
         },
         {
           "id": "05",
-          "text": "Assist in cybersecurity-related capacity building including awareness, theoretical training, practical training, testing, mentoring, supervising and sharing."
+          "text": "Contribute to cybersecurity capacity building by sharing research findings, and supporting knowledge transfer.",
+          "skill": "S18"
         },
         {
           "id": "06",
-          "text": "Identify cross-sectoral cybersecurity achievements and apply them in a different context or propose innovative approaches and solutions."
+          "text": "Identify relevant cybersecurity achievements and approaches across sectors and contexts, and adapt or apply them to develop innovative solutions.",
+          "skill": "S13"
         },
         {
           "id": "07",
-          "text": "Lead or participate in the innovation processes and projects including project management and budgeting."
+          "text": "Lead or participate in cybersecurity research and innovation projects, including planning, resource management and budgeting.",
+          "skill": "S20"
         },
         {
           "id": "08",
-          "text": "Publish and present scientific works and research and development results."
+          "text": "Publish and present findings from cybersecurity research and development activities to relevant audiences.",
+          "skill": "S15"
         },
         {
           "id": "09",
-          "text": "Coordinate the transition of successful research outcomes and prototypes into operational use with relevant technical and business functions."
+          "text": "Coordinate the transition of validated research outcomes, prototypes and innovative solutions into operational use, working with relevant technical and business functions.",
+          "skill": "S17"
         }
       ],
       "skills": [
@@ -748,12 +968,17 @@ window.ECSF_DATA = {
         {
           "id": "S18",
           "name": "Capacity Building",
-          "level": "L1"
+          "level": "L2"
         },
         {
           "id": "S20",
           "name": "Project & Resource Management",
           "level": "L2"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
+          "level": "L3"
         }
       ],
       "icon": "researcher",
@@ -766,51 +991,58 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Support users and customers on cybersecurity matters."
+          "text": "Advise and guide users and customers in resolving cybersecurity-related issues and applying secure configurations and practices.",
+          "skill": "S16"
         },
         {
           "id": "02",
-          "text": "Integrate cybersecurity solutions."
+          "text": "Integrate cybersecurity solutions into systems, services and products.",
+          "skill": "S09"
         },
         {
           "id": "03",
-          "text": "Securely configure systems, services and products."
+          "text": "Securely configure systems, services and products in accordance with cybersecurity requirements and applicable procedures.",
+          "skill": "S09"
         },
         {
           "id": "04",
-          "text": "Maintain and upgrade systems, services and products, including applying patches to address technical vulnerabilities."
+          "text": "Maintain and upgrade systems, services and products, including applying patches and implementing cybersecurity changes to remediate identified vulnerabilities and security issues, in accordance with applicable procedures and risk assessment results.",
+          "skill": "S09"
         },
         {
           "id": "05",
-          "text": "Implement cybersecurity procedures and controls."
+          "text": "Implement cybersecurity procedures and controls in accordance with defined cybersecurity requirements and applicable policies.",
+          "skill": "S09"
         },
         {
           "id": "06",
-          "text": "Document, report and update cybersecurity documentation."
+          "text": "Document, maintain and update cybersecurity-related operational documentation, configurations and procedures.",
+          "skill": "S06"
         },
         {
           "id": "07",
-          "text": "Support cybersecurity audits, and conduct routine vulnerability scanning and technical security testing."
+          "text": "Conduct routine vulnerability scanning and cybersecurity checks to identify cybersecurity weaknesses and support their remediation.",
+          "skill": "S09"
         },
         {
           "id": "08",
-          "text": "Collaborate with internal and external stakeholders (e.g., vendors, other technical teams) on implementation projects and to resolve configuration and operational issues."
+          "text": "Work with internal and external stakeholders to resolve cybersecurity-related operational and configuration issues.",
+          "skill": "S17"
         },
         {
           "id": "09",
-          "text": "Monitor the performance and availability of implemented cybersecurity controls and systems, and facilitate the collection and maintenance of security logs to support monitoring activities."
+          "text": "Monitor implemented cybersecurity controls and systems, and support the collection and maintenance of security logs to identify operational security issues and support continuous improvement.",
+          "skill": "S14"
         },
         {
           "id": "10",
-          "text": "Participate in incident investigation and remediation."
+          "text": "Participate in cybersecurity incident investigation and remediation activities under the direction of the responsible incident response function.",
+          "skill": "S08"
         },
         {
           "id": "11",
-          "text": "Correct security issues, implement security changes following the organisation's procedures and risk assessment results."
-        },
-        {
-          "id": "12",
-          "text": "Provision, manage and de-provision user access and permissions to systems and services in accordance with security policy."
+          "text": "Implement, maintain and test the technical measures that support cyber resilience, such as backup, restore, redundancy and recovery mechanisms, so that systems, services and products can recover from cybersecurity incidents.",
+          "skill": "S21"
         }
       ],
       "skills": [
@@ -835,8 +1067,23 @@ window.ECSF_DATA = {
           "level": "L2"
         },
         {
+          "id": "S16",
+          "name": "Stakeholder Communications",
+          "level": "L2"
+        },
+        {
           "id": "S17",
           "name": "Collaboration & Teamwork",
+          "level": "L2"
+        },
+        {
+          "id": "S21",
+          "name": "Cyber Resilience",
+          "level": "L2"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
           "level": "L2"
         }
       ],
@@ -850,56 +1097,64 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Develop, update, design, organise and deliver cybersecurity and data protection curricula, educational material and activities (e.g. seminars, courses, hands-on trainings), tailored to content, method, tools and trainee needs."
+          "text": "Design, develop, organise and deliver cybersecurity awareness training, cybersecurity and data protection curricula, educational materials and training activities tailored to the target audience.",
+          "skill": "S19"
         },
         {
           "id": "02",
-          "text": "Monitor, evaluate and report training effectiveness."
+          "text": "Consult stakeholders to identify training and awareness needs, and translate business requirements and risk priorities into appropriate learning objectives, programmes and activities.",
+          "skill": "S16"
         },
         {
           "id": "03",
-          "text": "Evaluate and report trainee's performance."
+          "text": "Evaluate training effectiveness and trainee performance, and report findings to improve cybersecurity education programmes.",
+          "skill": "S14"
         },
         {
           "id": "04",
-          "text": "Finding new approaches for education, training and awareness-raising."
+          "text": "Identify, evaluate and develop new approaches to cybersecurity education, training and awareness-raising.",
+          "skill": "S13"
         },
         {
           "id": "05",
-          "text": "Design, develop and deliver cybersecurity simulations, virtual labs or cyber range environments."
+          "text": "Support the design and delivery of cybersecurity simulations, virtual labs, cyber ranges and other practical learning environments.",
+          "skill": "S19"
         },
         {
           "id": "06",
-          "text": "Provide guidance on cybersecurity certification programs for individuals, and encourage and empower continuous enhancement of cybersecurity capacity."
-        },
-        {
-          "id": "07",
-          "text": "Continuously maintain and enhance personal cybersecurity education and subject-matter expertise."
-        },
-        {
-          "id": "08",
-          "text": "Collaborate with applicable stakeholders to align training and awareness programmes with organisational risk priorities and training needs."
+          "text": "Provide guidance on cybersecurity professional development and certification pathways, and support the continuous enhancement of cybersecurity capabilities.",
+          "skill": "S18"
         }
       ],
       "skills": [
         {
-          "id": "S14",
-          "name": "Monitoring & Continuous Improvement",
+          "id": "S13",
+          "name": "Research & Innovation",
           "level": "L2"
         },
         {
-          "id": "S17",
-          "name": "Collaboration & Teamwork",
+          "id": "S14",
+          "name": "Monitoring & Continuous Improvement",
+          "level": "L3"
+        },
+        {
+          "id": "S16",
+          "name": "Stakeholder Communications",
           "level": "L2"
         },
         {
           "id": "S18",
           "name": "Capacity Building",
-          "level": "L4"
+          "level": "L3"
         },
         {
           "id": "S19",
           "name": "Training Design & Delivery",
+          "level": "L3"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
           "level": "L3"
         }
       ],
@@ -913,60 +1168,75 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Develop an organisational and product Risk Management strategy."
+          "text": "Develop and maintain the cybersecurity risk management strategy, aligned with business objectives and risk appetite.",
+          "skill": "S02"
         },
         {
           "id": "02",
-          "text": "Manage an inventory of the organisation's assets."
+          "text": "Develop, implement, maintain and continually improve the cyber risk management policy, plans, procedures and related documentation.",
+          "skill": "S06"
         },
         {
           "id": "03",
-          "text": "Identify and assess cybersecurity-related threats and vulnerabilities of ICT systems."
+          "text": "Identify and assess cybersecurity risks arising from relevant threats, vulnerabilities, assets and business processes, and recommend appropriate risk treatment options, in alignment with business strategy and risk appetite.",
+          "skill": "S02"
         },
         {
           "id": "04",
-          "text": "Leverage threat intelligence on the threat landscape, attacker profiles and attack potential to inform risk assessment and prioritisation."
+          "text": "Identify, assess and monitor cybersecurity risks arising from suppliers, service providers and third parties, including supply-chain dependencies, and recommend risk treatment and the security requirements to include in contracts.",
+          "skill": "S04"
         },
         {
           "id": "05",
-          "text": "Assess cybersecurity risks and propose most appropriate risk treatment options, including security controls and risk mitigation and avoidance, that best address the organisation's strategy."
+          "text": "Leverage threat intelligence on the threat landscape, attacker profiles and attack potential to inform cybersecurity risk assessment and prioritisation.",
+          "skill": "S02"
         },
         {
           "id": "06",
-          "text": "Monitor the effectiveness of cybersecurity controls and risk levels, ensuring risks remain within the organisation's acceptable tolerance."
+          "text": "Ensure cybersecurity risks are reflected in business impact analyses and disaster recovery plans, so that critical services can withstand and recover from cybersecurity incidents.",
+          "skill": "S21"
         },
         {
           "id": "07",
-          "text": "Report and communicate risk management outcomes, key risk indicators and residual risk levels to senior management and relevant governance bodies."
+          "text": "Monitor cybersecurity risk levels and the effectiveness of risk treatment measures, identify risks exceeding defined tolerance levels, and support appropriate escalation and remediation.",
+          "skill": "S02"
         },
         {
           "id": "08",
-          "text": "Define and maintain the risk assessment methodology and criteria used to evaluate and prioritise cybersecurity risks."
+          "text": "Report and communicate risk management outcomes, key risk indicators and residual risk levels to senior management and relevant governance bodies.",
+          "skill": "S15"
         },
         {
           "id": "09",
-          "text": "Consult with asset owners, business units and other relevant stakeholders throughout the risk identification, analysis and treatment process."
+          "text": "Define and maintain the risk assessment methodology and criteria used to evaluate and prioritise cybersecurity risks.",
+          "skill": "S02"
         },
         {
           "id": "10",
-          "text": "Periodically evaluate and improve the organisation's risk management framework, policies and methodology."
+          "text": "Consult with asset owners, business units and other relevant stakeholders throughout the risk identification, analysis and treatment process.",
+          "skill": "S16"
+        },
+        {
+          "id": "11",
+          "text": "Continuously evaluate and improve the cybersecurity risk management framework, policies and processes.",
+          "skill": "S14"
         }
       ],
       "skills": [
-        {
-          "id": "S01",
-          "name": "Governance & Strategy",
-          "level": "L3"
-        },
         {
           "id": "S02",
           "name": "Risk Management",
           "level": "L4"
         },
         {
-          "id": "S07",
-          "name": "Threat Intelligence & Analysis",
-          "level": "L1"
+          "id": "S04",
+          "name": "Supply Chain & Third-Party Security",
+          "level": "L3"
+        },
+        {
+          "id": "S06",
+          "name": "Procedures & Standards Development",
+          "level": "L3"
         },
         {
           "id": "S14",
@@ -979,9 +1249,19 @@ window.ECSF_DATA = {
           "level": "L4"
         },
         {
-          "id": "S17",
-          "name": "Collaboration & Teamwork",
-          "level": "L2"
+          "id": "S16",
+          "name": "Stakeholder Communications",
+          "level": "L3"
+        },
+        {
+          "id": "S21",
+          "name": "Cyber Resilience",
+          "level": "L3"
+        },
+        {
+          "id": "S22",
+          "name": "AI Literacy & Secure AI Use",
+          "level": "L3"
         }
       ],
       "icon": "risk-manager",
@@ -994,10 +1274,11 @@ window.ECSF_DATA = {
     {
       "id": "S01",
       "name": "Governance & Strategy",
+      "description": "Setting cybersecurity vision, strategy and policy direction, at enterprise and domain level.",
       "levels": {
         "L1": {
           "name": "Foundational",
-          "description": "Contributes to strategy-development work under direction, helping draft inputs for a specific domain strategy."
+          "description": "Contributes to strategy development work under direction, helping draft inputs for a specific domain strategy."
         },
         "L2": {
           "name": "Practitioner",
@@ -1005,45 +1286,45 @@ window.ECSF_DATA = {
         },
         "L3": {
           "name": "Advanced",
-          "description": "Develops an organisational and product Risk Management strategy, owning the strategy for a major security domain and translating business objectives into a coherent set of goals, policies and plans for it."
+          "description": "Owns the strategy for a major security domain, translating business objectives into a coherent set of goals, policies and plans for it."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Defines, secures senior-management approval for, and oversees execution of the organisation's overall cybersecurity strategy, goals, policies and plans, and supervises the continual improvement of the management systems (e.g. ISMS, CSMS) through which that strategy is governed."
+          "description": "Defines and secures senior management approval for, and oversees execution of the overall cybersecurity strategy, goals, policies and plans, and supervises the continual improvement of the cybersecurity management systems through which the cybersecurity strategy is governed."
         }
-      },
-      "description": "Setting the organisation's top-level cybersecurity vision, strategy and policy direction, and securing senior management buy-in for it."
+      }
     },
     {
       "id": "S02",
       "name": "Risk Management",
+      "description": "Identifying, assessing, treating and monitoring cybersecurity risks.",
       "levels": {
         "L1": {
           "name": "Foundational",
-          "description": "Applies a defined risk-scoring framework to classify individual findings (audit findings, or legal and compliance gaps) by severity."
+          "description": "Applies a defined risk scoring framework to classify individual findings by severity."
         },
         "L2": {
           "name": "Practitioner",
-          "description": "Independently manages the organisation's asset inventory, and identifies and assesses cybersecurity threats and vulnerabilities affecting ICT systems."
+          "description": "Independently identifies and assesses cybersecurity threats and vulnerabilities for a defined system, design or scope."
         },
         "L3": {
           "name": "Advanced",
-          "description": "Assesses cybersecurity risk and proposes the most appropriate treatment options that best balance protection against business objectives."
+          "description": "Identifies and assesses cybersecurity risks, recommends treatment options aligned with strategy and risk appetite, and monitors risk levels and the effectiveness of treatment against tolerance."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Owns the risk-management practice at the enterprise level, defining and maintaining the risk-assessment methodology and criteria used across the organisation, or presenting the resulting risk exposure to senior management to secure formal approval of the organisation's risk appetite and tolerance."
+          "description": "Owns the risk management practice at enterprise level. Sets the cybersecurity risk assessment methodology and criteria used, or presents the resulting risk exposure to senior management to secure formal approval of the risk appetite and tolerance."
         }
-      },
-      "description": "Identifying, assessing, treating and monitoring cybersecurity risks."
+      }
     },
     {
       "id": "S03",
       "name": "Legal, Regulatory & Compliance",
+      "description": "Monitoring, interpreting and applying cybersecurity laws, regulations and standards, and managing privacy and data-protection obligations.",
       "levels": {
         "L1": {
           "name": "Foundational",
-          "description": "Follows established legal and procedural requirements when carrying out a specific activity (e.g. a forensic investigation)."
+          "description": "Follows established legal and procedural requirements when carrying out a specific activity."
         },
         "L2": {
           "name": "Practitioner",
@@ -1051,22 +1332,22 @@ window.ECSF_DATA = {
         },
         "L3": {
           "name": "Advanced",
-          "description": "Ensures the wider cybersecurity programme aligns with legal, regulatory and contractual obligations, identifying and resolving compliance gaps across the organisation."
+          "description": "Owns compliance for the cybersecurity programme, ensures alignment with legal, regulatory and contractual obligations, monitors compliance testing and audit outcomes, manages operational obligations, and identifies and resolves compliance gaps."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Provides legal advice and guidance on cybersecurity laws and regulations, enforces and advocates the organisation's data-privacy programme, acts as the key contact point for legal queries and complaints, manages data-subject-rights requests, and maintains the organisation's records of processing activities."
+          "description": "Acts as the authority on cybersecurity and data-protection law, anticipates legal and regulatory developments and assesses their impact, provides the legal advice and interpretation that shapes the cybersecurity strategy, policies and procedures, and owns and enforces the data-privacy and protection programme."
         }
-      },
-      "description": "Interpreting and applying cybersecurity laws, regulations and standards, and managing privacy and data protection obligations."
+      }
     },
     {
       "id": "S04",
       "name": "Supply Chain & Third-Party Security",
+      "description": "Assessing, managing and monitoring cybersecurity risk from suppliers and third parties, including security requirements, contractual controls and ongoing relationship management.",
       "levels": {
         "L1": {
           "name": "Foundational",
-          "description": "Assists in evaluating an individual supplier or third-party arrangement against the organisation's security requirements, under guidance."
+          "description": "Assists in evaluating an individual supplier or third-party arrangement against the cybersecurity requirements, under guidance."
         },
         "L2": {
           "name": "Practitioner",
@@ -1074,18 +1355,18 @@ window.ECSF_DATA = {
         },
         "L3": {
           "name": "Advanced",
-          "description": "Defines and oversees the organisation's supply-chain security strategy, setting requirements for how third-party risk is identified and managed."
+          "description": "Manages third-party cyber risk across the supplier portfolio, evaluates suppliers by criticality, assesses and monitors their security posture, and ensures they comply with security and regulatory requirements through contractual controls and audits."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Manages the legal aspects of third-party security relationships and ensures supplier compliance with relevant security standards and regulations through audits and contractual controls."
+          "description": "Defines and oversees the supply chain security strategy, setting the requirements for how third-party cyber risk is identified and managed."
         }
-      },
-      "description": "Overseeing suppliers cybersecurity requirements, contractual controls and ongoing relationship management."
+      }
     },
     {
       "id": "S05",
       "name": "Audit & Assurance",
+      "description": "Planning and conducting cybersecurity audits to evaluate controls and their conformity and compliance with applicable requirements.",
       "levels": {
         "L1": {
           "name": "Foundational",
@@ -1093,22 +1374,22 @@ window.ECSF_DATA = {
         },
         "L2": {
           "name": "Practitioner",
-          "description": "Conducts audit activities — opening meetings, interviews, observation and review of documented information — for a defined scope."
+          "description": "Conducts audit activities using suitable auditing methods for a defined audit objective, scope and criteria."
         },
         "L3": {
           "name": "Advanced",
-          "description": "Develops the audit plan (methodology, sampling approach and tests), defines audit scope, objectives and criteria based on the risk profile of the target environment, and collects and evaluates evidence to determine findings."
+          "description": "Develops the audit plan and working documents, and defines audit scope, objectives and criteria based on the risk profile of the target environment."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Owns the end-to-end audit function: maintains the integrity and confidentiality of audit records, determines audit conclusions, and conducts follow-up activities to verify that corrective actions have been implemented effectively."
+          "description": "Directs audits end to end, from planning through to the follow-up that verifies corrective actions have been implemented and are effective, and sets the audit approach that other auditors apply."
         }
-      },
-      "description": "Planning, conducting and reporting cybersecurity audits to evaluate controls, conformity and compliance."
+      }
     },
     {
       "id": "S06",
       "name": "Procedures & Standards Development",
+      "description": "Documenting and maintaining the operational procedures, plans, playbooks, methodologies, cybersecurity requirements and technical standards that put the overall cybersecurity policy and strategy into practice.",
       "levels": {
         "L1": {
           "name": "Foundational",
@@ -1120,41 +1401,41 @@ window.ECSF_DATA = {
         },
         "L3": {
           "name": "Advanced",
-          "description": "Produces and owns the standards, policies and procedures for an entire cybersecurity area — e.g. an auditing policy, a digital-forensics investigation policy, privacy policies, threat-intelligence investigation policy, an Incident Response Plan, penetration-testing rules of engagement, etc."
+          "description": "Produces and owns the procedures, requirements and technical standards for an entire cybersecurity area."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Oversees and sets the direction for procedures and standards across every discipline in the organisation, ensuring they're coherent as a whole rather than each domain working in isolation."
+          "description": "Oversees and sets the direction for procedures and standards across every discipline, ensuring they're coherent as a whole rather than each domain working in isolation."
         }
-      },
-      "description": "Documenting the detailed, activity-specific procedures, methodologies and technical standards used to carry out cybersecurity work in consistent manner"
+      }
     },
     {
       "id": "S07",
       "name": "Threat Intelligence & Analysis",
+      "description": "Collecting, analysing and disseminating cyber threat intelligence to support decision-making.",
       "levels": {
         "L1": {
           "name": "Foundational",
-          "description": "Monitors advancements and emerging trends in the cybersecurity landscape, and draws on available threat intelligence to inform risk assessment and prioritisation."
+          "description": "Monitors advancements and emerging trends in the cybersecurity threat landscape."
         },
         "L2": {
           "name": "Practitioner",
-          "description": "Adapts a specific control or assessment (e.g. a security architecture) in response to newly identified threats."
+          "description": "Collects and processes threat data from various sources and produces threat intelligence for a defined requirement"
         },
         "L3": {
           "name": "Advanced",
-          "description": "Collects and processes threat data from diverse sources, and identifies and assesses the threat actors and TTPs relevant to the organisation."
+          "description": "Identifies, monitors and assesses the threat actors and TTPs across multiple intelligence requirements, producing actionable threat intelligence and tactical and operational mitigation advice."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Owns the end-to-end intelligence practice: elaborates and advises on mitigation plans at the tactical, operational and strategic level, and leverages intelligence to support threat modelling, risk-mitigation recommendations and threat hunting."
+          "description": "Owns the threat intelligence procedure, sets threat intelligence requirements and priorities with the business, advises on mitigation at the strategic level, and integrates threat intelligence into threat modelling, risk management and threat hunting."
         }
-      },
-      "description": "Collecting, analysing and disseminating cyber threat intelligence to support decision-making."
+      }
     },
     {
       "id": "S08",
       "name": "Incident Response",
+      "description": "Planning for, detecting, analysing, containing and recovering from cybersecurity incidents",
       "levels": {
         "L1": {
           "name": "Foundational",
@@ -1162,68 +1443,68 @@ window.ECSF_DATA = {
         },
         "L2": {
           "name": "Practitioner",
-          "description": "Independently investigates and triages individual incidents under moderate supervision, escalating the most severe cases."
+          "description": "Independently investigates and triages individual incidents, escalating the most severe cases."
         },
         "L3": {
           "name": "Advanced",
-          "description": "Serves as the organisation's executive sponsor for incident response: holding ultimate decision authority during major cybersecurity crises and directing business-level response, resourcing and disclosure decisions, while day-to-day technical direction sits with the incident-response function."
+          "description": "Owns the technical response to complex incidents end to end as technical lead, directs analysis, containment, eradication and recovery across responders and contributing teams, sets technical priorities and sequencing, interprets incomplete or ambiguous data to determine root cause, impact and attack vector, makes high-impact technical decisions under uncertainty, and synthesises findings across related incidents."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Directs the technical response as the organisation's senior incident-response authority: identifying and analysing incidents, determining scope, severity and business impact, leading response to the most complex or novel cases, and developing new incident-handling techniques where no playbook exists."
+          "description": "Sets the direction that incident responders operate within, along one of two paths.\nExpert path: acts as the senior technical incident-response authority, leading the response to the most complex or novel incidents, developing new incident-handling techniques where no playbook exists, and defining the methodology, playbooks and standards that others apply.\nManagement path: provides executive leadership for incident response during major cybersecurity incidents, directing strategic response decisions and advising senior management on risk, business impact and required actions, while day-to-day technical direction of the response sits with the incident-response function."
         }
-      },
-      "description": "Planning for, detecting, analysing, containing and recovering from cybersecurity incidents"
+      }
     },
     {
       "id": "S09",
       "name": "Cybersecurity Controls & Operations",
+      "description": "Deploying, configuring and operating cybersecurity solutions and controls, including identifying, assessing and remediating vulnerabilities.",
       "levels": {
         "L1": {
           "name": "Foundational",
-          "description": "Applies security configurations under instruction and runs automated vulnerability scans, or notices and reports vulnerabilities found incidentally while doing other technical work"
+          "description": "Applies security configurations under instruction and runs automated vulnerability scans."
         },
         "L2": {
           "name": "Practitioner",
-          "description": "Independently configures and maintains individual systems against a given standard, and confirms fixes worked through retesting."
+          "description": "Independently handles a defined set of systems or vulnerabilities, configures and maintains systems against a given standard, assesses, remediates or coordinates the handling of identified and reported vulnerabilities."
         },
         "L3": {
           "name": "Advanced",
-          "description": "Owns the full operational security lifecycle across the organisation's systems, services and products end to end — configuring, integrating, patching and maintaining controls, supporting audits and vulnerability scanning, monitoring logs, and managing access — resolving issues independently without needing to escalate."
+          "description": "Owns the operational security of the  systems, services and products end to end, remediating cybersecurity issues independently without needing to escalate."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "N/A."
+          "description": "N/A"
         }
-      },
-      "description": "Deploying, configuring and operating cybersecurity solutions and controls."
+      }
     },
     {
       "id": "S10",
       "name": "Architecture & Engineering",
+      "description": "Designing secure architectures that meet business and cybersecurity requirements.",
       "levels": {
         "L1": {
           "name": "Foundational",
-          "description": "Applies documented architecture patterns and secure-configuration standards to a single system, under guidance."
+          "description": "Reviews a single system design against documented architecture patterns and security requirements under guidance, flagging deviations."
         },
         "L2": {
           "name": "Practitioner",
-          "description": "Reviews individual designs against security requirements and produces supporting architectural documentation and specifications."
+          "description": "Reviews individual designs against security requirements and develops and maintains architecture documentation and technical specifications."
         },
         "L3": {
           "name": "Advanced",
-          "description": "Establishes a secure environment across the development lifecycle for a defined set of systems, coordinating the integration of cybersecurity components against specifications."
+          "description": "Defines and guides the implementation of secure architecture requirements throughout the development lifecycle of a defined set of systems, services and products."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Designs and proposes security architectures aligned with organisational strategy, evaluates architectures against requirements, performs threat modelling to support secure design, and plans and sequences the evolution of the architecture over time to close identified gaps."
+          "description": "Designs and proposes cybersecurity architectures aligned with the cybersecurity strategy, based on business context, stakeholder needs and risk drivers, assesses architectures and implemented solutions against requirements, and defines the transition path from current to target architecture, prioritising the work to close identified gaps."
         }
-      },
-      "description": "Designing and implementing secure system architectures that meet business and security requirements."
+      }
     },
     {
       "id": "S11",
       "name": "Offensive Security & Ethical Hacking",
+      "description": "Simulating adversarial attacks to identify and demonstrate exploitable vulnerabilities.",
       "levels": {
         "L1": {
           "name": "Foundational",
@@ -1231,22 +1512,22 @@ window.ECSF_DATA = {
         },
         "L2": {
           "name": "Practitioner",
-          "description": "Independently conducts reconnaissance to map the attack surface, and tests systems, products, services and operations against standard methodologies and regulatory/security standards, within a defined scope."
+          "description": "Independently conducts reconnaissance and information gathering to map the attack surface, and tests systems against standard methodologies within a defined scope."
         },
         "L3": {
           "name": "Advanced",
-          "description": "Manually identifies and exploits known types of vulnerabilities within a defined engagement scope to demonstrate compromise across a complex environment."
+          "description": "Plans and leads penetration testing engagements end to end across complex environments, defines scope, methodology and rules of engagement, manually identifies, chains and exploits known types of vulnerabilities to demonstrate compromise, and attempts to bypass or circumvent implemented controls to assess their effectiveness."
         },
         "L4": {
           "name": "Strategic / Expert",
           "description": "Identifies previously unknown attack vectors and demonstrates exploitation of technical vulnerabilities across complex systems, products, services and operations."
         }
-      },
-      "description": "Simulating adversarial attacks to identify and demonstrate exploitable vulnerabilities."
+      }
     },
     {
       "id": "S12",
       "name": "Digital Forensics & Investigation",
+      "description": "Conducting technically sound and, where required, legally defensible digital investigations and evidence handling.",
       "levels": {
         "L1": {
           "name": "Foundational",
@@ -1254,22 +1535,22 @@ window.ECSF_DATA = {
         },
         "L2": {
           "name": "Practitioner",
-          "description": "Independently recovers, extracts and analyses digital evidence for a single case, maintaining chain of custody."
+          "description": "Independently conducts the forensic analysis for a single case, recovers, extracts and analyses digital evidence while maintaining chain of custody."
         },
         "L3": {
           "name": "Advanced",
-          "description": "Independently conducts a full forensic investigation for a single incident, identifying, documenting and analysing evidence and inspecting the environment for signs of unauthorised activity."
+          "description": "Leads forensic investigations end to end, to a legally defensible standard, across complex, multi-system incidents, preserves and documents evidence, correlates it to reconstruct events and timelines, inspects environments for unauthorised activity, and identifies the weaknesses that contributed to them."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Owns the organisation's digital-forensics practice end to end: leads investigations across complex, multi-system incidents, identifies, recovers, extracts, documents and analyses digital evidence, preserves and protects that evidence and its chain of custody, and inspects environments for evidence of unauthorised or unlawful activity."
+          "description": "Owns the digital-forensics practice, sets the investigative methodology and acts as the recognised digital forensic expert, also in legal proceedings."
         }
-      },
-      "description": "Conducting technically sound, legally defensible digital investigations and evidence handling."
+      }
     },
     {
       "id": "S13",
       "name": "Research & Innovation",
+      "description": "Advancing cybersecurity knowledge and practice through research, experimentation and innovative solutions.",
       "levels": {
         "L1": {
           "name": "Foundational",
@@ -1281,18 +1562,18 @@ window.ECSF_DATA = {
         },
         "L3": {
           "name": "Advanced",
-          "description": "Selects and applies frameworks, methods and tools to build and test proofs of concept for a specific project."
+          "description": "Leads a research project end to end, defines the research questions and approach, selects and applies frameworks, methods and tools, builds and tests proofs of concept, and synthesises results across studies."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Analyses and assesses emerging cybersecurity technologies and developments, conducts research that advances the state of the art, develops and tests innovative solutions — including proofs of concept, pilots and prototypes — and applies cross-sectoral insights to propose novel approaches."
+          "description": "Leads cybersecurity research programmes, produces work recognised as advancing the state of the art, and steers the translation of results into practice."
         }
-      },
-      "description": "Advancing cybersecurity knowledge and practice through research, experimentation and innovative solutions."
+      }
     },
     {
       "id": "S14",
       "name": "Monitoring & Continuous Improvement",
+      "description": "Measuring and monitoring the performance of cybersecurity activities and controls to drive improvement.",
       "levels": {
         "L1": {
           "name": "Foundational",
@@ -1304,22 +1585,22 @@ window.ECSF_DATA = {
         },
         "L3": {
           "name": "Advanced",
-          "description": "Monitors and evaluates the effectiveness of a cybersecurity process over time (audit activities, cybersecurity controls and incident-response actions, training, or the overall cybersecurity programme), driving continuous improvement and feeding lessons learned back into procedures."
+          "description": "Monitors and evaluates the effectiveness of a cybersecurity process or programme over time, driving continuous improvement and feeding lessons learned back into procedures."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "N/A"
+          "description": "Defines the framework for measuring cybersecurity performance, reports on it to senior management, and uses it to set improvement priorities across the programme."
         }
-      },
-      "description": "Measuring and monitoring the performance of cybersecurity activities and controls to drive improvement."
+      }
     },
     {
       "id": "S15",
       "name": "Findings & Reporting",
+      "description": "Documenting and reporting the results of audits, incidents, investigations and other cybersecurity activities.",
       "levels": {
         "L1": {
           "name": "Foundational",
-          "description": "Documents individual findings (evidence, technical detail and supporting documentation) for a senior colleague to review and compile into the final report."
+          "description": "Documents individual findings for a senior colleague to review and compile into the final report."
         },
         "L2": {
           "name": "Practitioner",
@@ -1327,18 +1608,18 @@ window.ECSF_DATA = {
         },
         "L3": {
           "name": "Advanced",
-          "description": "Synthesises findings across multiple cases into a portfolio-level report that informs broader prioritisation."
+          "description": "Synthesises findings across multiple cases into a report that informs broader prioritisation."
         },
         "L4": {
           "name": "Strategic / Expert",
           "description": "Produces and owns reporting or disclosure that reaches senior management, the board or regulators, where the framing directly shapes governance or business decisions."
         }
-      },
-      "description": "Documenting and reporting the results of audits, incidents, investigations and other cybersecurity activities."
+      }
     },
     {
       "id": "S16",
       "name": "Stakeholder Communications",
+      "description": "Exchanging information with internal and external stakeholders on cybersecurity matters.",
       "levels": {
         "L1": {
           "name": "Foundational",
@@ -1354,14 +1635,14 @@ window.ECSF_DATA = {
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Develops and maintains relationships with cybersecurity-related authorities, regulators and professional communities on the organisation's behalf, and shares information with them directly"
+          "description": "Acts as liaison on cybersecurity matters towards authorities, regulators and professional communities, sharing information with them directly and shaping the key messages communicated externally"
         }
-      },
-      "description": "Engaging and communicating with internal and external stakeholders on cybersecurity matters."
+      }
     },
     {
       "id": "S17",
       "name": "Collaboration & Teamwork",
+      "description": "Working jointly with internal and external stakeholders, coordinating actions to deliver shared cybersecurity outcomes.",
       "levels": {
         "L1": {
           "name": "Foundational",
@@ -1377,37 +1658,37 @@ window.ECSF_DATA = {
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Builds and leads the cross-organisational relationships needed to coordinate shared cybersecurity objectives across teams and partner organisations at scale."
+          "description": "Builds and leads the relationships needed to coordinate shared cybersecurity objectives, setting the direction for how others work together."
         }
-      },
-      "description": "Working effectively with internal and external partners to achieve shared cybersecurity objectives."
+      }
     },
     {
       "id": "S18",
       "name": "Capacity Building",
+      "description": "Developing cybersecurity capacity in others, building cybersecurity awareness, identifying skill gaps, guiding professional development and mentoring.",
       "levels": {
         "L1": {
           "name": "Foundational",
-          "description": "Helps run capacity-building activities designed by others (e.g. supporting an awareness session, training exercise, or mentoring activity) under the direction of a more senior colleague"
+          "description": "Helps run capacity-building activities designed by others under the direction of a more senior colleague"
         },
         "L2": {
           "name": "Practitioner",
-          "description": "Independently contributes to specific capacity-building tasks, such as delivering a training session, testing, or mentoring within a defined project."
+          "description": "Independently contributes to specific capacity-building tasks, such as delivering a training session, mentoring a colleague or supporting knowledge transfer, within a defined project."
         },
         "L3": {
           "name": "Advanced",
-          "description": "Develops and proposes staff-awareness training initiatives to achieve compliance and foster a cybersecurity culture within a specific domain."
+          "description": "Develops, proposes and communicates capacity-building initiatives for a specific domain or audience — e.g. staff-awareness training to achieve compliance and foster a cybersecurity culture, or guidance on professional development and certification pathways."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Sponsors and oversees the continuous development of cybersecurity capacity across the organisation, provides guidance on certification pathways, and champions continuous enhancement of subject-matter expertise."
+          "description": "Sponsors and oversees the continuous development of cybersecurity capacity across the organisation."
         }
-      },
-      "description": "Growing the cybersecurity capacity skills over time, building awareness, spotting gaps, planning career paths, and mentoring people"
+      }
     },
     {
       "id": "S19",
       "name": "Training Design & Delivery",
+      "description": "Designing and building the technical training content itself.",
       "levels": {
         "L1": {
           "name": "Foundational",
@@ -1419,18 +1700,18 @@ window.ECSF_DATA = {
         },
         "L3": {
           "name": "Advanced",
-          "description": "Owns the technical training curriculum, developing, updating and delivering courses, activities, simulations and cyber-range environments across multiple audiences, and continually seeks new approaches to education, training and awareness-raising."
+          "description": "Owns the cybersecurity training curriculum for multiple audiences, designs, develops, organises and delivers awareness training, curricula, educational materials and activities, and supports the design and delivery of simulations, virtual labs and cyber ranges."
         },
         "L4": {
           "name": "Strategic / Expert",
           "description": "N/A"
         }
-      },
-      "description": "Designing and building the technical training content itself: curricula, hands-on exercises, cyber ranges and awareness material"
+      }
     },
     {
       "id": "S20",
       "name": "Project & Resource Management",
+      "description": "Planning and overseeing the people, budget, time and resources needed for cybersecurity initiatives.",
       "levels": {
         "L1": {
           "name": "Foundational",
@@ -1438,18 +1719,66 @@ window.ECSF_DATA = {
         },
         "L2": {
           "name": "Practitioner",
-          "description": "Identifies the competencies, resources and time needed for a specific activity (e.g. an individual audit or project), monitoring costs where applicable."
+          "description": "Identifies the competencies, resources and time needed for a specific activity, monitoring costs where applicable."
         },
         "L3": {
           "name": "Advanced",
-          "description": "Plans, secures and negotiates the overall cybersecurity budget, and allocates financial, human and technical resources across initiatives and priorities."
+          "description": "Plans and manages the resources, budget and schedule for a programme or portfolio of cybersecurity initiatives."
         },
         "L4": {
           "name": "Strategic / Expert",
-          "description": "Sets the organisation's multi-year cybersecurity investment and resourcing strategy, embeds it in wider business and workforce planning, and holds ultimate accountability for how cybersecurity budget and resources are allocated"
+          "description": "Plans, secures and negotiates the overall cybersecurity budget, allocates financial, human and technical resources across initiatives and priorities, and sets the multi-year investment and resourcing strategy"
         }
-      },
-      "description": "Planning and overseeing the people, budget, time and resources needed for cybersecurity initiatives."
+      }
+    },
+    {
+      "id": "S21",
+      "name": "Cyber Resilience",
+      "description": "Ensuring critical services can withstand, respond to and recover from cybersecurity incidents, and integrating cybersecurity into business continuity, disaster recovery and crisis management arrangements.",
+      "levels": {
+        "L1": {
+          "name": "Foundational",
+          "description": "Executes defined backup, restore or recovery procedures and takes part in recovery tests, following established plans."
+        },
+        "L2": {
+          "name": "Practitioner",
+          "description": "Independently ensures or verifies the resilience of a specific system, service or incident response: implements, tests or assesses continuity and recovery measures against defined recovery objectives, or supports recovery decisions during an incident."
+        },
+        "L3": {
+          "name": "Advanced",
+          "description": "Owns the cybersecurity dimension of resilience for a set of critical services: ensures that continuity and recovery planning reflects cybersecurity risks, and that services are designed and prepared to withstand and recover from cybersecurity incidents."
+        },
+        "L4": {
+          "name": "Strategic / Expert",
+          "description": "Sets the direction for cyber resilience across the entity, integrating cybersecurity into business continuity, disaster recovery and crisis management, and overseeing their regular testing."
+        }
+      }
+    },
+    {
+      "id": "S22",
+      "name": "AI Literacy & Secure AI Use",
+      "description": "Understanding AI's capabilities, limitations and risks, and applying, promoting or governing their safe and responsible use across cybersecurity work.",
+      "levels": {
+        "L1": {
+          "name": "Foundational",
+          "description": "Understands basic AI concepts and terminology, and follows policy guidance when using AI tools in day-to-day work, escalating anything that looks like unsafe or unauthorised AI use."
+        },
+        "L2": {
+          "name": "Practitioner",
+          "description": "Applies AI tools safely and effectively within their own role, verifying AI-generated outputs before relying on them, recognising common failure modes, and can explain AI risks to non-technical audience."
+        },
+        "L3": {
+          "name": "Advanced",
+          "description": "Advises others on safe and responsible AI use within a specific domain, contributes to AI-safety-aware policies, procedures or training content, and recognises when a situation needs escalation to AI governance, security or legal specialists."
+        },
+        "L4": {
+          "name": "Strategic / Expert",
+          "description": "Sets enterprise-wide expectations for safe and responsible AI use, owns the AI-literacy strategy and its integration into culture, and represents the organisation's AI posture to senior management, regulators and external stakeholders."
+        }
+      }
     }
+  ],
+  "transversal": [
+    "S22"
   ]
 };
