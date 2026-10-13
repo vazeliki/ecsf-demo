@@ -1,6 +1,6 @@
 # Extended ECSF — Cybersecurity Role Profiles
 
-A static website for the Extended ECSF: 12 role profiles and 20 skill areas,
+A static website for the Extended ECSF: 12 role profiles and 22 skill areas,
 each skill area scored across four proficiency levels, with roles and skill
 areas cross-linked in both directions.
 
@@ -22,9 +22,11 @@ areas cross-linked in both directions.
 - **ECSF Profiles** (`#/roles`) — searchable grid of all 12 profiles
 - **Profile detail** (`#/role/<slug>`) — tasks + skill areas (with that role's
   level in each one), links through to each skill area
-- **Skill Areas** (`#/skills`) — searchable grid of all 20 skill areas
+- **Skill Areas** (`#/skills`) — searchable grid of all 22 skill areas
 - **Skill detail** (`#/skill/<id>`) — L1–L4 proficiency progression, plus every
   role that uses this skill and at what level
+- **Skills Matrix** (`#/matrix`) — every profile against every skill area
+- **Key Features** (`#/features`) — how levels, target levels and the task-to-skill-area mapping work
 
 
 ## Credits
@@ -42,6 +44,8 @@ All content lives in `assets/data.js` under `window.ECSF_DATA`:
   (`id`, `name`, `level` — that role's proficiency level in that skill area)
 - `skills[]` — each has `id`, `name`, and `levels` (`L1`–`L4`, each with
   `name` and `description`)
+- `roles[].tasks[].skill` — the skill area each task is mapped to
+- `transversal[]` — skill-area IDs whose profile levels are set directly (e.g. `S22`)
 
 Edit the JSON-like object directly and refresh — no build step. `app.js`
 reads everything dynamically, so adding a new role or skill area just means
