@@ -1,6 +1,6 @@
 window.ECSF_DATA = {
   "meta": {
-    "title": "ECSF updated",
+    "title": "ECSF 2.0",
     "date": "07/10/2026",
     "source": "ECSF_RevisedTasks_Oct2026.xlsx, ECSF_SkillAreas_Oct2026.xlsx",
     "roleCount": 12,
