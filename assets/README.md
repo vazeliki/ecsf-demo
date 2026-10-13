@@ -1,6 +1,6 @@
 # ECSF 2.0 — Cybersecurity Role Profiles
 
-A static website for ECSF 2.0: 12 role profiles and 22 skill areas,
+A static website for ECSF 2.0: 12 ECSF profiles and 22 skill areas,
 each skill area scored across four proficiency levels, with roles and skill
 areas cross-linked in both directions.
 
@@ -28,14 +28,6 @@ areas cross-linked in both directions.
 - **Skills Matrix** (`#/matrix`) — every profile against every skill area
 - **Key Features** (`#/features`) — how levels, target levels and the task-to-skill-area mapping work
 
-
-## Credits
-
-The 12 role-profile icons and their colors are sourced directly from ENISA's
-official [ECSF Web Tool](https://github.com/enisaeu/ECSF) (EUPL licence),
-the same source as the framework data itself. The card layout on the Roles
-page (icon, colored title, summary, "[more]" link) is modeled on ENISA's own
-[ECSF Tool](https://enisaeu.github.io/ECSF/#/profiles) profile grid.
 
 ## Editing content later
 
