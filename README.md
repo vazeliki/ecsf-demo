@@ -1,4 +1,4 @@
-# Extended ECSF — Cybersecurity Role Profiles
+# ECSF 2.0
 
 A demo website for the ECSF 2.0: ECSF profiles and skill areas,
 each skill area evolves across four proficiency levels, with tasks and skill
