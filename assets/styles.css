@@ -92,3 +92,18 @@ a.sa-chip:hover{border-color:#9ac7e7;color:var(--accent)}
 mark{background:#fde68a;color:inherit;border-radius:3px;padding:0 1px}
 .search-note{margin:6px 0 0;font-weight:700;color:var(--accent);font-size:14px}
 .search-note:empty{display:none}
+
+/* ---------- Profile summary statement & alternative titles ---------- */
+.profile-mission{margin:8px 0 0;font-size:15px;line-height:1.65}
+.profile-more{margin-top:16px}
+.profile-more summary{cursor:pointer;color:var(--accent);font-weight:750;font-size:14px;list-style:none;display:inline-flex;align-items:center;gap:6px}
+.profile-more summary::-webkit-details-marker{display:none}
+.profile-more summary::before{content:"+";display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;background:#edf4fb;font-weight:800}
+.profile-more[open] summary::before{content:"−"}
+.profile-more summary:hover{text-decoration:underline}
+.profile-facts{display:grid;gap:18px;margin-top:14px;padding-top:16px;border-top:1px solid var(--line)}
+.profile-fact h4{margin:0 0 6px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:800}
+.profile-fact p{margin:0;font-size:15px;line-height:1.65}
+.alt-titles{display:flex;flex-wrap:wrap;gap:6px}
+.alt-title{display:inline-block;background:#eef4fa;border:1px solid #dbe6f0;padding:5px 11px;border-radius:999px;font-size:13px;color:var(--ink)}
+.profile-more .more-open{display:none}.profile-more[open] .more-open{display:inline}.profile-more[open] .more-closed{display:none}

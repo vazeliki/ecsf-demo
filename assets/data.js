@@ -166,7 +166,15 @@ window.ECSF_DATA = {
       "icon": "ciso",
       "color": "#2A5C8A",
       "summary": "Manages an organisation’s cybersecurity strategy and its implementation to ensure that all digitally-enabled systems, services, assets and products are adequately secured and protected.",
-      "mission": "Defines, maintains and communicates the cybersecurity vision, strategy, policies and procedures. Manages the implementation of the cybersecurity policy across the organisation and its products. Assures crisis management and information exchange with external authorities, professional bodies and industry stakeholders on cybersecurity matters."
+      "mission": "Defines, maintains and communicates the cybersecurity vision, strategy, policies and procedures. Manages the implementation of the cybersecurity policy across the organisation and its products. Assures crisis management and information exchange with external authorities, professional bodies and industry stakeholders on cybersecurity matters.",
+      "alternativeTitles": [
+        "Cybersecurity Programme Director",
+        "Information Security Officer (ISO)",
+        "Product Security Officer (CPSO)",
+        "Information Security Manager",
+        "Head of Information Security",
+        "Cybersecurity officer"
+      ]
     },
     {
       "name": "Cybersecurity Auditor",
@@ -292,7 +300,16 @@ window.ECSF_DATA = {
       "icon": "auditor",
       "color": "#9C7209",
       "summary": "Performs cybersecurity audits, with varying scope and depth, to determine the extent to which applicable requirements are fulfilled.",
-      "mission": "Conducts independent audits to assess the effectiveness of implemented architecture and controls and the extent to which applicable requirements are fulfilled. Evaluates and verifies cybersecurity-related products (systems, hardware, software and services), functions and policies examining, compliance with (amongst others) guidelines, standards and regulations."
+      "mission": "Conducts independent audits to assess the effectiveness of implemented architecture and controls and the extent to which applicable requirements are fulfilled. Evaluates and verifies cybersecurity-related products (systems, hardware, software and services), functions and policies examining, compliance with (amongst others) guidelines, standards and regulations.",
+      "alternativeTitles": [
+        "Information Security Auditor (IT or Legal Auditor)",
+        "Product Security Auditor",
+        "Governance Risk Compliance (GRC) Auditor",
+        "Cybersecurity Audit Manager",
+        "Cybersecurity Procedures and Processes Auditor",
+        "Information Security Risk and Compliance Auditor",
+        "Data Protection Assessment Analyst"
+      ]
     },
     {
       "name": "Penetration Tester",
@@ -378,7 +395,17 @@ window.ECSF_DATA = {
       "icon": "pentester",
       "color": "#B0203A",
       "summary": "Conduct authorized penetration testing to assess the effectiveness of security controls, reveals and utilises cybersecurity vulnerabilities, assessing their criticality if exploited by threat actors.",
-      "mission": "Plans, designs, implements and executes compliance-driven penetration testing activities and attack scenarios to evaluate the effectiveness of deployed or planned security measures. Identifies vulnerabilities or failures on technical and organisational controls that affect the confidentiality, integrity and availability of ICT products (e.g. systems, hardware, software and services)."
+      "mission": "Plans, designs, implements and executes compliance-driven penetration testing activities and attack scenarios to evaluate the effectiveness of deployed or planned security measures. Identifies vulnerabilities or failures on technical and organisational controls that affect the confidentiality, integrity and availability of ICT products (e.g. systems, hardware, software and services).",
+      "alternativeTitles": [
+        "Pentester",
+        "Ethical Hacker",
+        "Vulnerability Analyst",
+        "Cybersecurity Tester",
+        "Offensive Cybersecurity Expert",
+        "Defensive Cybersecurity Expert",
+        "Red Team Expert",
+        "Red Teamer"
+      ]
     },
     {
       "name": "Cyber Incident Responder",
@@ -489,7 +516,14 @@ window.ECSF_DATA = {
       "icon": "incident-reponder",
       "color": "#C1521A",
       "summary": "Monitors the organisation’s and its digitally-enabled products' cybersecurity state, handles incidents during cyber-attacks, and ensures the continued operation of ICT systems and affected products.",
-      "mission": "Monitors and assesses the cybersecurity state of digitally-enabled systems and products. Analyzes and evaluates cybersecurity incidents, mitigates their impact, executes containment, eradication and identifies root causes and threat actors. Executes response activities in line with the organisation’s Incident Response Plan to restore the functionality of affected IT systems, products, and processes. Collects digital evidence and documents all actions taken to support post-incident analysis and compliance requirements."
+      "mission": "Monitors and assesses the cybersecurity state of digitally-enabled systems and products. Analyzes and evaluates cybersecurity incidents, mitigates their impact, executes containment, eradication and identifies root causes and threat actors. Executes response activities in line with the organisation’s Incident Response Plan to restore the functionality of affected IT systems, products, and processes. Collects digital evidence and documents all actions taken to support post-incident analysis and compliance requirements.",
+      "alternativeTitles": [
+        "Cyber Incident Handler",
+        "Incident Response Engineer",
+        "Security Operations Center (SOC) Analyst",
+        "Cyber Fighter /Defender",
+        "Security Operation Analyst (SOC Analyst)"
+      ]
     },
     {
       "name": "Cybersecurity Architect",
@@ -595,7 +629,12 @@ window.ECSF_DATA = {
       "icon": "architect",
       "color": "#1E7A6E",
       "summary": "Designs and proposes security-by-design solutions (infrastructures, digitally-enabled products, systems, assets, software, hardware and services) and cybersecurity controls.",
-      "mission": "Designs solutions in accordance with security-by-design and privacy-by-design principles. Develops, monitors, and continuously improves architectural models, ensuring documentation and specifications incorporate appropriate security and privacy controls. Coordinates the secure development, integration, and maintenance of cybersecurity components in compliance with relevant standards and requirements."
+      "mission": "Designs solutions in accordance with security-by-design and privacy-by-design principles. Develops, monitors, and continuously improves architectural models, ensuring documentation and specifications incorporate appropriate security and privacy controls. Coordinates the secure development, integration, and maintenance of cybersecurity components in compliance with relevant standards and requirements.",
+      "alternativeTitles": [
+        "Cybersecurity Solutions Architect",
+        "Cybersecurity Designer",
+        "Data Security Architect"
+      ]
     },
     {
       "name": "Cyber Legal, Policy & Compliance Officer",
@@ -716,7 +755,17 @@ window.ECSF_DATA = {
       "icon": "dpo",
       "color": "#5B4B8A",
       "summary": "Manages compliance with cybersecurity-related standards, legal and regulatory frameworks based on the organisation’s strategy and legal requirements.",
-      "mission": "Oversees and ensures compliance with cybersecurity- and data-related legal, regulatory frameworks, and policies, in line with the organization’s strategy and legal obligations, including vendors and relevant third parties. Contributes to data protection initiatives and product security compliance. Provides legal advice for the development of cybersecurity governance processes and recommends remediation strategies to ensure ongoing compliance."
+      "mission": "Oversees and ensures compliance with cybersecurity- and data-related legal, regulatory frameworks, and policies, in line with the organization’s strategy and legal obligations, including vendors and relevant third parties. Contributes to data protection initiatives and product security compliance. Provides legal advice for the development of cybersecurity governance processes and recommends remediation strategies to ensure ongoing compliance.",
+      "alternativeTitles": [
+        "Data Protection Officer (DPO)",
+        "Privacy Protection Officer",
+        "Cyber Law Consultant",
+        "Cyber Legal Advisor",
+        "Data Compliance Officer",
+        "Cybersecurity Legal Officer",
+        "Cybersecurity Compliance Manager",
+        "Governance Risk Compliance (GRC) Consultant"
+      ]
     },
     {
       "name": "Digital Forensics Investigator",
@@ -817,7 +866,12 @@ window.ECSF_DATA = {
       "icon": "forensics-analyst",
       "color": "#8C4A2F",
       "summary": "Analyses digitally-enabled artefacts to uncover evidence as part of cybersecurity incident investigation or cybercrime investigation.",
-      "mission": "Identifies, captures, recovers, preserves and analyses data of digital systems under investigation. Provides analysis, reconstruction and interpretation of the digital evidence based on unbiased qualitative view."
+      "mission": "Identifies, captures, recovers, preserves and analyses data of digital systems under investigation. Provides analysis, reconstruction and interpretation of the digital evidence based on unbiased qualitative view.",
+      "alternativeTitles": [
+        "Digital Forensics Analyst",
+        "Cybersecurity & Forensic Specialist",
+        "Computer Forensics Consultant"
+      ]
     },
     {
       "name": "Cyber Threat Intelligence Specialist",
@@ -898,7 +952,11 @@ window.ECSF_DATA = {
       "icon": "cti-specialist",
       "color": "#8F7E17",
       "summary": "Collects, processes and analyses data and information to produce actionable intelligence reports and to disseminate them to target stakeholders.",
-      "mission": "Manages cyber threat intelligence life cycle including cyber threat information collection, analysis and production of actionable intelligence and dissemination to security stakeholders and the CTI community, at a tactical, operational and strategic level. Identifies and monitors the Tactics, Techniques and Procedures (TTPs) used by cyber threat actors and their trends, track threat actors’ activities and observe how non-cyber events can influence cyber-related actions."
+      "mission": "Manages cyber threat intelligence life cycle including cyber threat information collection, analysis and production of actionable intelligence and dissemination to security stakeholders and the CTI community, at a tactical, operational and strategic level. Identifies and monitors the Tactics, Techniques and Procedures (TTPs) used by cyber threat actors and their trends, track threat actors’ activities and observe how non-cyber events can influence cyber-related actions.",
+      "alternativeTitles": [
+        "Cyber Intelligence Analyst",
+        "Cyber Threat Modeller"
+      ]
     },
     {
       "name": "Cybersecurity Researcher",
@@ -984,7 +1042,16 @@ window.ECSF_DATA = {
       "icon": "researcher",
       "color": "#3E7D3A",
       "summary": "Conducts research on cybersecurity-related topics.",
-      "mission": "Conducts fundamental/basic and applied research and facilitates innovation in the cybersecurity domain through cooperation with other stakeholders. Analyses trends and scientific findings in cybersecurity. Publish and disseminates knowledge."
+      "mission": "Conducts fundamental/basic and applied research and facilitates innovation in the cybersecurity domain through cooperation with other stakeholders. Analyses trends and scientific findings in cybersecurity. Publish and disseminates knowledge.",
+      "alternativeTitles": [
+        "Cybersecurity Research Engineer",
+        "Chief Research Officer (CRO) in cybersecurity",
+        "Senior Research Officer in cybersecurity",
+        "Research and Development (R&D) Officer in cybersecurity",
+        "Scientific Staff in cybersecurity",
+        "Research and Innovation Officer/Expert in cybersecurity",
+        "Research Fellow in cybersecurity"
+      ]
     },
     {
       "name": "Cybersecurity Implementer",
@@ -1090,7 +1157,13 @@ window.ECSF_DATA = {
       "icon": "implementer",
       "color": "#1E7FA3",
       "summary": "Develops, deploys and operates cybersecurity solutions (systems, assets, software, controls or services) on infrastructures and products.",
-      "mission": "Provides cybersecurity-related technical development, integration, testing, implementation, operation, maintenance, monitoring and support of cybersecurity solutions. Ensures adherence to specifications and conformance requirements, assures sound performance and resolves technical issues required in the organisation’s cybersecurity-related solutions (systems, assets, software, controls and services), infrastructures and products."
+      "mission": "Provides cybersecurity-related technical development, integration, testing, implementation, operation, maintenance, monitoring and support of cybersecurity solutions. Ensures adherence to specifications and conformance requirements, assures sound performance and resolves technical issues required in the organisation’s cybersecurity-related solutions (systems, assets, software, controls and services), infrastructures and products.",
+      "alternativeTitles": [
+        "Cybersecurity Solutions Expert",
+        "Cybersecurity Developer",
+        "Cybersecurity Engineer",
+        "Development, Security & Operations (DevSecOps) Engineer"
+      ]
     },
     {
       "name": "Cybersecurity Educator",
@@ -1161,7 +1234,13 @@ window.ECSF_DATA = {
       "icon": "educator",
       "color": "#2E9E6B",
       "summary": "Improves cybersecurity knowledge, skills and competencies of humans.",
-      "mission": "Designs, develops and conducts awareness, training and educational programmes in cybersecurity and data protection-related topics. Uses appropriate teaching and training methods, techniques and instruments to communicate and enhance the cybersecurity culture, capabilities, knowledge and skills of human resources. Promotes the importance of cybersecurity and consolidates it into the organisation."
+      "mission": "Designs, develops and conducts awareness, training and educational programmes in cybersecurity and data protection-related topics. Uses appropriate teaching and training methods, techniques and instruments to communicate and enhance the cybersecurity culture, capabilities, knowledge and skills of human resources. Promotes the importance of cybersecurity and consolidates it into the organisation.",
+      "alternativeTitles": [
+        "Cybersecurity Awareness Specialist",
+        "Cybersecurity Culture Specialist",
+        "Cybersecurity Trainer",
+        "Faculty in Cybersecurity (Professor, Lecturer)"
+      ]
     },
     {
       "name": "Cybersecurity Risk Manager",
@@ -1267,7 +1346,14 @@ window.ECSF_DATA = {
       "icon": "risk-manager",
       "color": "#7A2338",
       "summary": "Manages the organisation’s cybersecurity-related risks in alignment with the organisation’s strategy. Develops, maintains, and communicates risk management processes and reports.",
-      "mission": "Continuously manages (identifies, analyses, assesses, estimates, mitigates) the cybersecurity-related risks of ICT infrastructures, products, systems and services by planning, applying, reporting and communicating risk analysis, assessment and treatment. Establishes a risk management strategy for the organisation and ensures that risks remain at an acceptable level for the organisation by selecting mitigation actions and controls."
+      "mission": "Continuously manages (identifies, analyses, assesses, estimates, mitigates) the cybersecurity-related risks of ICT infrastructures, products, systems and services by planning, applying, reporting and communicating risk analysis, assessment and treatment. Establishes a risk management strategy for the organisation and ensures that risks remain at an acceptable level for the organisation by selecting mitigation actions and controls.",
+      "alternativeTitles": [
+        "Cybersecurity Risk Analyst",
+        "Cybersecurity Risk Assurance Consultant",
+        "Cybersecurity Risk Assessor",
+        "Cybersecurity Impact Analyst",
+        "Cyber Risk Manager"
+      ]
     }
   ],
   "skills": [

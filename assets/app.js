@@ -59,13 +59,13 @@ function renderRoleGrid(filter) {
   const q = (filter || "").trim().toLowerCase();
   const items = ROLES.map((r) => ({
     r,
-    nameHit: !q || r.name.toLowerCase().includes(q),
+    nameHit: !q || [r.name].concat(r.alternativeTitles || []).join(" | ").toLowerCase().includes(q),
     tasks: q ? r.tasks.filter((t) => t.text.toLowerCase().includes(q)) : [],
   })).filter((x) => x.nameHit || x.tasks.length);
 
   const note = document.getElementById("role-search-note");
   note.textContent = q
-    ? `${items.length} of ${ROLES.length} profiles match “${filter.trim()}” in their name or tasks.`
+    ? `${items.length} of ${ROLES.length} profiles match “${filter.trim()}” in their name, alternative titles or tasks.`
     : "";
 
   if (items.length === 0) {
@@ -134,7 +134,12 @@ function renderRoleDetail(slug) {
 
   document.getElementById("role-detail-title").textContent = role.name;
   document.getElementById("role-detail-title").style.color = role.color || "";
-  document.getElementById("role-detail-summary").textContent = role.mission || role.summary || "";
+  document.getElementById("role-detail-more").open = false;
+  document.getElementById("role-detail-statement").textContent = role.summary || "";
+  document.getElementById("role-detail-summary").textContent = role.mission || "";
+  const alts = role.alternativeTitles || [];
+  document.getElementById("role-detail-alt-wrap").style.display = alts.length ? "" : "none";
+  document.getElementById("role-detail-alt").innerHTML = alts.map((t) => `<span class="alt-title">${esc(t)}</span>`).join("");
   const iconEl = document.getElementById("role-detail-icon");
   if (role.icon) {
     iconEl.src = "assets/icons/" + role.icon + ".svg";
