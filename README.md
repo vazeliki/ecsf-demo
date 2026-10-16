@@ -20,12 +20,12 @@ areas cross-linked in both directions.
 
 - **Home** (`#/`) — hero, "how this works" cards, proficiency-level legend
 - **ECSF Profiles** (`#/roles`) — searchable grid of all 12 profiles
-- **Profile detail** (`#/role/<slug>`) — tasks + skill areas (with that role's
+- **Profile overview** (`#/role/<slug>`) — tasks + skill areas (with that role's
   level in each one), links through to each skill area
 - **Skill Areas** (`#/skills`) — searchable grid of all 22 skill areas
-- **Skill detail** (`#/skill/<id>`) — L1–L4 proficiency progression, plus every
+- **Skill areas level progression** (`#/skill/<id>`) — L1–L4 proficiency progression, plus every
   role that uses this skill and at what level
-- **Skills Matrix** (`#/matrix`) — every profile against every skill area
+- **Skill Areas Matrix** (`#/matrix`) — every profile against every skill area
 - **Key Features** (`#/features`) — how levels, target levels and the task-to-skill-area mapping work
 
 
