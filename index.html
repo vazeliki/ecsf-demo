@@ -34,7 +34,7 @@
       <img src="assets/images/ecsf-logo.svg" alt="European Cybersecurity Skills Framework (ECSF)" class="home-logo" />
 
       <p class="home-text">
-        This is a demonstration of how the ECSF 2.0 will look like.
+        This is a demonstration of how ECSF 2.0 will look like.
       </p>
       <p class="home-text">
         The 12 ECSF profiles have been revised and updated. This demo presents the revised tasks and their associated skill areas. By clicking on each skill area, users can see how the corresponding skill is expected to evolve across different proficiency levels.
@@ -52,7 +52,7 @@
     <div class="section-head">
       <div>
         <h2>ECSF Profiles</h2>
-        <p class="muted">Click a profile to see its tasks and skill areas. Search also looks inside task wording.</p>
+        <p class="muted">Click a profile to see its tasks and skill areas. Search also looks inside alternative titles and task wording.</p>
         <p class="search-note" id="role-search-note"></p>
       </div>
       <div class="search-wrap">
@@ -71,7 +71,20 @@
         <img id="role-detail-icon" src="" alt="" width="44" height="44" style="display:none;" />
         <h2 id="role-detail-title"></h2>
       </div>
-      <p class="muted" id="role-detail-summary" style="margin-top:8px;font-size:15px;"></p>
+      <p id="role-detail-summary" class="profile-mission"></p>
+      <details class="profile-more" id="role-detail-more">
+        <summary><span class="more-closed">Show more</span><span class="more-open">Show less</span></summary>
+        <div class="profile-facts">
+          <div class="profile-fact">
+            <h4>Summary statement</h4>
+            <p id="role-detail-statement"></p>
+          </div>
+          <div class="profile-fact" id="role-detail-alt-wrap">
+            <h4>Alternative titles</h4>
+            <div class="alt-titles" id="role-detail-alt"></div>
+          </div>
+        </div>
+      </details>
     </div>
     <div class="detail-grid">
       <div class="panel">
@@ -143,7 +156,7 @@
     <div class="section-head">
       <div>
         <h2>Key Features</h2>
-        <p class="muted">How the ECSF 2.0 is built: proficiency levels, target levels, and how tasks and skill areas are mapped to profiles.</p>
+        <p class="muted">How ECSF 2.0 is built: proficiency levels, target levels, and how tasks and skill areas are mapped to profiles.</p>
       </div>
     </div>
     <ol class="feature-list">
@@ -223,7 +236,7 @@
 
 <footer>
   <div><strong>ECSF 2.0</strong><span id="footer-meta"></span></div>
-  <div>ENISA's European Cybersecurity Skills Framework</div>
+  <div>Based on ENISA's European Cybersecurity Skills Framework</div>
 </footer>
 
 <script src="assets/data.js"></script>
