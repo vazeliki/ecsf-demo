@@ -1,7 +1,7 @@
 window.ECSF_DATA = {
   "meta": {
     "title": "ECSF 2.0 Demo",
-    "date": "07/10/2026",
+    "date": "19/10/2026",
     "source": "ECSF_RevisedTasks_Oct2026.xlsx, ECSF_SkillAreas_Oct2026.xlsx",
     "roleCount": 12,
     "skillAreaCount": 22
@@ -772,7 +772,7 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Identify, recover, extract, document and analyse digital evidence.",
+          "text": "Identify, acquire, recover and extract digital evidence, and examine it to identify artefacts relevant to the investigation.",
           "skill": "S12"
         },
         {
@@ -1170,7 +1170,7 @@ window.ECSF_DATA = {
       "tasks": [
         {
           "id": "01",
-          "text": "Design, develop, organise and deliver cybersecurity awareness training, cybersecurity and data protection curricula, educational materials and training activities tailored to the target audience.",
+          "text": "Design, organise and deliver cybersecurity education and awareness programmes tailored to the target audience.",
           "skill": "S19"
         },
         {
