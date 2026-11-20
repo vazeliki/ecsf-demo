@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>ECSF 2.0 - Demo</title>
-<meta name="description" content="Updated ECSF profiles, tasks, skill areas, knowledge areas and proficiency levels." />
+<meta name="description" content="Updated ECSF profiles, tasks, skill areas and proficiency levels." />
 <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
@@ -21,7 +21,6 @@
     <button class="nav-btn" data-view="features">Key Features</button>
     <button class="nav-btn" data-view="roles">ECSF Profiles</button>
     <button class="nav-btn" data-view="skills">Skill Areas</button>
-    <button class="nav-btn" data-view="kas">Knowledge Areas</button>
     <button class="nav-btn" data-view="matrix">Profiles × Skill Areas</button>
   </nav>
 </div>
@@ -42,9 +41,6 @@
       <p class="home-text">
         For each skill area mapped to an ECSF profile, a target proficiency level is also assigned. This represents the level expected of a fully proficient practitioner of that profile. For example, the CISO profile is assigned Governance &amp; Strategy at Level 4. This does not imply that every CISO must start at Level 4; a more junior CISO may naturally begin at Level 1 or 2 and progressively develop towards the target Level 4.
       </p>
-      <p class="home-text">
-        Each profile also lists the knowledge areas it draws on, marked as <strong>Core</strong> (central to the profile's work) or <strong>Foundational</strong> (baseline knowledge expected of every cybersecurity professional). Clicking a knowledge area shows its definition and indicative knowledge items.
-      </p>
 
       <button class="primary home-cta" data-nav="roles">Explore the ECSF profiles</button>
     </div>
@@ -55,7 +51,7 @@
     <div class="section-head">
       <div>
         <h2>ECSF Profiles</h2>
-        <p class="muted">Select a profile to view its tasks, skill areas, target levels and knowledge areas.</p>
+        <p class="muted">Select a profile to view its tasks, skill areas and target levels. </p>
         <p class="search-note" id="role-search-note"></p>
       </div>
       <div class="search-wrap">
@@ -99,19 +95,6 @@
         <div class="skill-map" id="role-detail-skills"></div>
       </div>
     </div>
-    <div class="panel ka-panel" id="role-detail-ka-panel">
-      <div class="ka-panel-head">
-        <div>
-          <h3>Knowledge areas</h3>
-          <p class="ka-count" id="role-detail-ka-count"></p>
-        </div>
-        <div class="ka-legend">
-          <span><span class="ka-tag ka-c">C</span> Core</span>
-          <span><span class="ka-tag ka-f">F</span> Foundational</span>
-        </div>
-      </div>
-      <div class="ka-domains" id="role-detail-kas"></div>
-    </div>
   </section>
 
   <!-- ================= SKILLS LIST ================= -->
@@ -144,55 +127,6 @@
     <div class="skill-roles">
       <h3>ECSF Profiles that use this skill</h3>
       <div id="skill-detail-roles"></div>
-    </div>
-  </section>
-
-  <!-- ================= KNOWLEDGE AREAS LIST ================= -->
-  <section id="view-kas" class="view">
-    <div class="section-head">
-      <div>
-        <h2>Knowledge areas</h2>
-        <p class="muted">Select a knowledge area to see its definition, indicative knowledge items and the profiles that draw on it.</p>
-      </div>
-      <div class="search-wrap">
-        <input type="text" id="ka-search" placeholder="Search knowledge areas and items…" />
-      </div>
-    </div>
-    <div id="ka-list"></div>
-  </section>
-
-  <!-- ================= KNOWLEDGE AREA DETAIL ================= -->
-  <section id="view-ka-detail" class="view">
-    <button class="back" id="ka-back" data-nav="kas">&larr; Back to knowledge areas</button>
-    <div class="detail-hero">
-      <p class="eyebrow" id="ka-detail-eyebrow">Knowledge area</p>
-      <h2 id="ka-detail-title"></h2>
-      <p class="muted" id="ka-detail-desc" style="margin-top:10px;font-size:15px;"></p>
-    </div>
-    <div class="panel">
-      <div class="ka-panel-head">
-        <h3>Indicative knowledge items</h3>
-        <div class="ka-legend">
-          <span><span class="ki-type ki-F">Foundational</span></span>
-          <span><span class="ki-type ki-C">Core</span></span>
-          <span><span class="ki-type ki-Su">Supporting</span></span>
-          <span><span class="ki-type ki-Sp">Specialised</span></span>
-        </div>
-      </div>
-      <ul class="ki-list" id="ka-detail-items"></ul>
-      <details class="ki-key">
-        <summary>What do these flags mean?</summary>
-        <dl>
-          <dt><span class="ki-type ki-F">Foundational</span></dt><dd>Prerequisite for entering the cybersecurity workforce, for all profiles.</dd>
-          <dt><span class="ki-type ki-C">Core</span></dt><dd>Core knowledge for at least one profile.</dd>
-          <dt><span class="ki-type ki-Su">Supporting</span></dt><dd>Needed by specific profiles, but never as Core.</dd>
-          <dt><span class="ki-type ki-Sp">Specialised</span></dt><dd>Context-specific knowledge, needed only in particular sectors, platforms or roles.</dd>
-        </dl>
-      </details>
-    </div>
-    <div class="skill-roles">
-      <h3>ECSF Profiles that draw on this knowledge area</h3>
-      <div id="ka-detail-roles"></div>
     </div>
   </section>
 
@@ -305,7 +239,6 @@
 </footer>
 
 <script src="assets/data.js"></script>
-<script src="assets/ka-data.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>
