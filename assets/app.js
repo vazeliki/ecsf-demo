@@ -2,6 +2,7 @@ const DATA = window.ECSF_DATA;
 const ROLES = DATA.roles;
 const SKILLS = DATA.skills;
 const TRANSVERSAL = DATA.transversal || [];
+const KA = window.ECSF_KA || { domains: [], areas: [], profiles: {} };
 const isTransversal = (id) => TRANSVERSAL.includes(id);
 function transTag() { return `<span class="trans-tag" title="Transversal skill area: profile levels are set directly, not derived from tasks">transversal</span>`; }
 function highlight(text, q) {
@@ -32,6 +33,7 @@ function esc(str) {
 function roleSlug(role) { return slugify(role.name); }
 function findRole(slug) { return ROLES.find((r) => roleSlug(r) === slug); }
 function findSkill(id) { return SKILLS.find((s) => s.id.toLowerCase() === id.toLowerCase()); }
+function findKA(id) { return KA.areas.find((a) => a.id.toLowerCase() === String(id).toLowerCase()); }
 function levelClass(lvl) { return "l" + String(lvl).replace(/\D/g, ""); }
 
 const ROLE_CODE = {
@@ -48,6 +50,37 @@ const ROLE_CODE = {
   "Cybersecurity Educator": "EDU",
   "Cybersecurity Risk Manager": "RM",
 };
+
+// Column codes used in the "Profiles x KAs" worksheet
+const KA_PROFILE_CODE = {
+  "Chief Information Security Officer (CISO)": "CISO",
+  "Cybersecurity Auditor": "AUD",
+  "Penetration Tester": "PT",
+  "Cyber Incident Responder": "IR",
+  "Cybersecurity Architect": "ARC",
+  "Cyber Legal, Policy & Compliance Officer": "LEG",
+  "Digital Forensics Investigator": "DFI",
+  "Cyber Threat Intelligence Specialist": "CTI",
+  "Cybersecurity Researcher": "RES",
+  "Cybersecurity Implementer": "IMP",
+  "Cybersecurity Educator": "EDU",
+  "Cybersecurity Risk Manager": "RM",
+};
+const KA_TYPE_LABEL = { C: "Core", F: "Foundational" };
+const KI_TYPE_LABEL = { F: "Foundational", C: "Core", Su: "Supporting", Sp: "Specialised" };
+
+function roleKAs(role) { return KA.profiles[KA_PROFILE_CODE[role.name]] || []; }
+function kaTag(type) {
+  return `<span class="ka-tag ka-${type.toLowerCase()}" title="${esc(KA_TYPE_LABEL[type] || type)}">${esc(type)}</span>`;
+}
+function wireInternalLinks(root) {
+  root.querySelectorAll("a[href^='#/']").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      go(a.getAttribute("href").replace(/^#\//, ""));
+    });
+  });
+}
 
 // ---------- static bits ----------
 document.getElementById("footer-meta").textContent =
@@ -164,12 +197,124 @@ function renderRoleDetail(slug) {
       </div>`)
     .join("");
 
-  document.querySelectorAll("#role-detail-skills a").forEach((a) => {
-    a.addEventListener("click", (e) => {
-      e.preventDefault();
-      go(a.getAttribute("href").replace(/^#\//, ""));
-    });
+  wireInternalLinks(document.getElementById("role-detail-skills"));
+  renderRoleKAs(role);
+}
+
+// ---------- render: role knowledge areas ----------
+function renderRoleKAs(role) {
+  const panel = document.getElementById("role-detail-ka-panel");
+  const mapped = roleKAs(role);
+  if (!mapped.length) { panel.style.display = "none"; return; }
+  panel.style.display = "";
+
+  const byId = Object.fromEntries(mapped.map((m) => [m.id, m.type]));
+  const core = mapped.filter((m) => m.type === "C").length;
+  const found = mapped.filter((m) => m.type === "F").length;
+  document.getElementById("role-detail-ka-count").textContent =
+    `${mapped.length} knowledge areas · ${core} core · ${found} foundational`;
+
+  const slug = roleSlug(role);
+  const el = document.getElementById("role-detail-kas");
+  el.innerHTML = KA.domains
+    .map((d) => {
+      const rows = d.kas.filter((id) => byId[id]);
+      if (!rows.length) return "";
+      return `
+        <div class="ka-domain">
+          <h4>${esc(d.name)}</h4>
+          ${rows.map((id) => {
+            const a = findKA(id);
+            return `
+              <a class="ka-row ka-row-${byId[id].toLowerCase()}" href="#/ka/${id.toLowerCase()}/from/${slug}">
+                <span class="ka-row-id">${esc(id)}</span>
+                <span class="ka-row-name">${esc(a ? a.name : id)}</span>
+                ${kaTag(byId[id])}
+              </a>`;
+          }).join("")}
+        </div>`;
+    })
+    .join("");
+  wireInternalLinks(el);
+}
+
+// ---------- render: knowledge area list ----------
+function renderKAList(filter) {
+  const wrap = document.getElementById("ka-list");
+  const q = (filter || "").trim().toLowerCase();
+  const kiText = (i) => i.name + (i.tech ? " " + i.tech : "");
+  const match = (a) => !q || [a.id, a.name, a.description].concat(a.items.map(kiText))
+    .join(" ").toLowerCase().includes(q);
+
+  const html = KA.domains
+    .map((d) => {
+      const areas = d.kas.map(findKA).filter((a) => a && match(a));
+      if (!areas.length) return "";
+      return `
+        <div class="ka-group">
+          <h3 class="ka-group-title">${esc(d.name)}</h3>
+          <div class="skill-grid">
+            ${areas.map((a) => {
+              const hits = q ? a.items.filter((i) => kiText(i).toLowerCase().includes(q)) : [];
+              return `
+              <div class="skill-card ka-card" data-id="${a.id.toLowerCase()}">
+                <div class="skill-id">${esc(a.id)}</div>
+                <h3>${esc(a.name)}</h3>
+                <p class="muted" style="font-size:15px;line-height:1.6;margin:0 0 12px;">${esc(a.description)}</p>
+                ${hits.length ? `<div class="task-hits"><strong>${hits.length} matching knowledge item${hits.length > 1 ? "s" : ""}</strong>
+                  ${hits.slice(0, 2).map((i) => `<p>${highlight(i.name, q)}</p>`).join("")}
+                  ${hits.length > 2 ? `<p class="more">+${hits.length - 2} more</p>` : ""}</div>` : ""}
+                <p class="ka-card-meta">${a.items.length} knowledge item${a.items.length === 1 ? "" : "s"}</p>
+              </div>`;
+            }).join("")}
+          </div>
+        </div>`;
+    })
+    .join("");
+
+  wrap.innerHTML = html || `<div class="empty">No knowledge areas match “${esc(filter)}”.</div>`;
+  wrap.querySelectorAll(".ka-card").forEach((card) => {
+    card.addEventListener("click", () => go("ka/" + card.dataset.id));
   });
+}
+
+// ---------- render: knowledge area detail ----------
+function renderKADetail(id, fromSlug) {
+  const a = findKA(id);
+  if (!a) return go("kas");
+
+  const back = document.getElementById("ka-back");
+  const fromRole = fromSlug && findRole(fromSlug);
+  if (fromRole) {
+    back.innerHTML = `&larr; Back to ${esc(fromRole.name)}`;
+    back.onclick = () => go("role/" + fromSlug);
+  } else {
+    back.innerHTML = "&larr; Back to knowledge areas";
+    back.onclick = () => go("kas");
+  }
+
+  document.getElementById("ka-detail-eyebrow").textContent = `${a.id} · Knowledge area · ${a.domain}`;
+  document.getElementById("ka-detail-title").textContent = a.name;
+  document.getElementById("ka-detail-desc").textContent = a.description;
+
+  document.getElementById("ka-detail-items").innerHTML = a.items
+    .map((i) => `
+      <li class="ki">
+        <span class="ki-id">${esc(i.id.split(".").pop())}</span>
+        <span class="ki-name">${esc(i.name)}${i.tech ? `<span class="ki-tech" title="Technology-specific">${esc(i.tech)}</span>` : ""}</span>
+        <span class="ki-type ki-${esc(i.type)}">${esc(KI_TYPE_LABEL[i.type] || i.type || "")}</span>
+      </li>`)
+    .join("");
+
+  const users = ROLES
+    .map((r) => ({ role: r, ref: roleKAs(r).find((m) => m.id === a.id) }))
+    .filter((x) => x.ref)
+    .sort((x, y) => (x.ref.type === y.ref.type ? 0 : x.ref.type === "C" ? -1 : 1));
+  const rolesEl = document.getElementById("ka-detail-roles");
+  rolesEl.innerHTML = users.length
+    ? users.map((x) => `<a class="tag tag-ka-${x.ref.type.toLowerCase()}" href="#/role/${roleSlug(x.role)}">${esc(x.role.name)} · ${esc(KA_TYPE_LABEL[x.ref.type])}</a>`).join("")
+    : `<p class="muted">No ECSF profiles are mapped to this knowledge area.</p>`;
+  wireInternalLinks(rolesEl);
 }
 
 // ---------- render: skill detail ----------
@@ -215,12 +360,7 @@ function renderSkillDetail(id) {
           `<a class="tag" href="#/role/${roleSlug(x.role)}">${esc(x.role.name)} · ${esc(x.ref.level)}</a>`
       )
       .join("");
-    rolesEl.querySelectorAll("a.tag").forEach((a) => {
-      a.addEventListener("click", (e) => {
-        e.preventDefault();
-        go(a.getAttribute("href").replace(/^#\//, ""));
-      });
-    });
+    wireInternalLinks(rolesEl);
   }
 }
 
@@ -249,13 +389,7 @@ function renderMatrix() {
   });
   html += "</tbody></table>";
   wrap.innerHTML = html;
-
-  wrap.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", (e) => {
-      e.preventDefault();
-      go(a.getAttribute("href").replace(/^#\//, ""));
-    });
-  });
+  wireInternalLinks(wrap);
 }
 
 // ---------- view switching ----------
@@ -265,15 +399,17 @@ const VIEW_IDS = {
   "role-detail": "view-role-detail",
   skills: "view-skills",
   "skill-detail": "view-skill-detail",
+  kas: "view-kas",
+  "ka-detail": "view-ka-detail",
   matrix: "view-matrix",
   features: "view-features",
 };
 
-function showView(key) {
+function showView(key, navOverride) {
   Object.values(VIEW_IDS).forEach((id) => document.getElementById(id).classList.remove("active"));
   document.getElementById(VIEW_IDS[key]).classList.add("active");
 
-  const navKey = key === "role-detail" ? "roles" : key === "skill-detail" ? "skills" : key;
+  const navKey = navOverride || (key === "role-detail" ? "roles" : key === "skill-detail" ? "skills" : key === "ka-detail" ? "kas" : key);
   document.querySelectorAll(".nav-btn").forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.view === navKey);
   });
@@ -311,6 +447,17 @@ function router() {
     showView("skill-detail");
     return;
   }
+  if (parts[0] === "kas") {
+    renderKAList(document.getElementById("ka-search").value);
+    showView("kas");
+    return;
+  }
+  if (parts[0] === "ka" && parts[1]) {
+    const from = parts[2] === "from" ? parts[3] : null;
+    renderKADetail(parts[1], from);
+    showView("ka-detail", from && findRole(from) ? "roles" : null);
+    return;
+  }
   if (parts[0] === "matrix") {
     renderMatrix();
     showView("matrix");
@@ -328,10 +475,12 @@ document.querySelectorAll(".nav-btn").forEach((btn) => {
   btn.addEventListener("click", () => go(btn.dataset.view === "home" ? "" : btn.dataset.view));
 });
 document.querySelectorAll("[data-nav]").forEach((btn) => {
+  if (btn.id === "ka-back") return; // handled per render
   btn.addEventListener("click", () => go(btn.dataset.nav));
 });
 document.getElementById("role-search").addEventListener("input", (e) => renderRoleGrid(e.target.value));
 document.getElementById("skill-search").addEventListener("input", (e) => renderSkillGrid(e.target.value));
+document.getElementById("ka-search").addEventListener("input", (e) => renderKAList(e.target.value));
 
 window.addEventListener("hashchange", () => {
   window.scrollTo(0, 0);
@@ -340,5 +489,6 @@ window.addEventListener("hashchange", () => {
 window.addEventListener("DOMContentLoaded", () => {
   renderRoleGrid("");
   renderSkillGrid("");
+  renderKAList("");
   router();
 });
